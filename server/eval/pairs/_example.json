@@ -1,0 +1,25 @@
+{
+  "id": "_example",
+  "split": "example",
+  "notes": "FORMAT EXAMPLE ONLY (files starting with _ are ignored). Fake MCA fresher resume vs junior backend developer JD.",
+  "extractedWith": { "genModel": "gemini-3.5-flash", "promptVersion": "v2" },
+  "resumeSkills": [
+    "JavaScript", "Python", "Java", "SQL", "React", "Node.js", "Express", "HTML5", "CSS3",
+    "Tailwind CSS", "MySQL", "MongoDB", "Git", "VS Code", "Postman", "MERN Stack", "JWT",
+    "REST API", "scikit-learn", "Collaborative Filtering", "Machine Learning"
+  ],
+  "jdSkills": [
+    { "name": "Node.js", "importance": "required", "label": "present" },
+    { "name": "TypeScript", "importance": "required", "label": "partial" },
+    { "name": "REST API", "importance": "required", "label": "present" },
+    { "name": "PostgreSQL", "importance": "required", "label": "partial" },
+    { "name": "SQL", "importance": "required", "label": "present" },
+    { "name": "Docker", "importance": "required", "label": "absent" },
+    { "name": "Git", "importance": "required", "label": "present" },
+    { "name": "JWT", "importance": "required", "label": "present" },
+    { "name": "OAuth", "importance": "required", "label": "absent" },
+    { "name": "AWS", "importance": "nice_to_have", "label": "absent" },
+    { "name": "Redis", "importance": "nice_to_have", "label": "absent" },
+    { "name": "Kubernetes", "importance": "nice_to_have", "label": "absent" }
+  ]
+}

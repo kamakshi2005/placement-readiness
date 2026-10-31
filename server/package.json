@@ -1,0 +1,28 @@
+{
+  "name": "placement-readiness-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "seed:admin": "node scripts/seedAdmin.js",
+    "eval:prepare": "node scripts/evalPrepare.js",
+    "eval:matcher": "node scripts/evalMatcher.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.32.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.1",
+    "multer": "^2.5.0",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
