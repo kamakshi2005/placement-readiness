@@ -14,10 +14,16 @@ const questionSchema = new mongoose.Schema(
     difficulty: { type: String, enum: ['easy', 'medium', 'hard'], required: true },
     timeLimitSec: { type: Number, required: true },
     text: { type: String, required: true },
-    // Reference answer for Module 4 scoring. NEVER sent to the student:
+    // Reference answer + key points for scoring. NEVER sent during the interview:
     // select:false hides it from queries, and the controller also strips it.
+    // Key points have stable ids (k1, k2, …) so every scoring run, evaluation and
+    // hand-label refers to the same point even when the order is shuffled.
+    // (Sessions created before Phase 1 stored keyPoints as plain strings — see normalizeKeyPoints.)
     reference: {
-      type: { answer: String, keyPoints: [String] },
+      type: {
+        answer: String,
+        keyPoints: [mongoose.Schema.Types.Mixed], // [{ id: 'k1', text: '…' }]
+      },
       select: false,
     },
     shownAt: Date, // set the first time the server sends this question (timer start)
@@ -45,8 +51,25 @@ const interviewSessionSchema = new mongoose.Schema(
     questions: [questionSchema],
     completedAt: Date,
 
+    // Background scoring progress (Phase 1). none -> pending -> running -> done | failed,
+    // or waiting_quota (not enough daily AI quota; retried every 15 min / after the reset)
+    scoring: {
+      status: { type: String, enum: ['none', 'pending', 'running', 'waiting_quota', 'done', 'failed'], default: 'none' },
+      total: Number, // answers to score
+      done: { type: Number, default: 0 },
+      startedAt: Date,
+      finishedAt: Date,
+      error: String, // failure details, or the waiting-for-quota message
+    },
+    // First time the student viewed the scored results. The results list the key points
+    // (incl. missing ones), which already reveals the gist of the model answers — later
+    // phases should treat repeat questions after this date as "seen", like referenceShown.
+    resultsViewedAt: Date,
+
     config: {
-      genModel: String,
+      genModel: String, // requested model for question writing
+      questionModelVersion: String, // model version that actually answered
+      repair: mongoose.Schema.Types.Mixed, // multi-part repair call: model, flagged, rewritten
       promptVersion: String,
       temperature: Number,
       gapShare: Number,

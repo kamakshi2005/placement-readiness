@@ -10,6 +10,8 @@ const llmCacheSchema = new mongoose.Schema(
     kind: { type: String, required: true, enum: ['resume_skills', 'jd_skills', 'embedding', 'judge'] },
     model: { type: String, required: true },
     value: { type: mongoose.Schema.Types.Mixed, required: true },
+    // which model actually answered + the version it reported (absent on old entries)
+    meta: mongoose.Schema.Types.Mixed,
   },
   { timestamps: true }
 );

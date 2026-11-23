@@ -11,6 +11,7 @@
 //   3. Try all (low, high) threshold combinations on the TUNE pairs; pick the best F1.
 //   4. Report that single choice on the HOLDOUT pairs (never used for choosing).
 import 'dotenv/config';
+import { defaultScriptMode } from '../src/services/llmRecorder.js';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -20,6 +21,9 @@ import { cachedEmbed } from '../src/services/aiCache.js';
 import { judgeBorderline, PROMPT_VERSION } from '../src/services/skills.js';
 import { canonicalSkill } from '../src/services/skillNames.js';
 import { modelInfo } from '../src/services/llm.js';
+
+// AI calls: replay saved responses by default; real calls only with --live or --record
+defaultScriptMode();
 
 // ---------- options ----------
 const args = process.argv.slice(2);

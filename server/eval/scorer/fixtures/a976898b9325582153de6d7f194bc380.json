@@ -1,0 +1,299 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "OAuth 2.0 is primarily implemented as a delegated authorization framework."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "subsequently issues access tokens to the requesting application."
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 2,
+    "clarity": 4,
+    "strengths": [
+     "Accurately identifies OAuth 2.0 as a delegated authorization framework.",
+     "Well-structured and clear technical prose."
+    ],
+    "improvements": [
+     "Mention that OAuth prevents exposing user credentials to third-party applications.",
+     "Explain the concept of scopes for restricting access permissions."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:01:58.771Z"
+  },
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "OAuth 2.0 is primarily implemented as a delegated authorization framework."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "subsequently issues access tokens to the requesting application."
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 2,
+    "clarity": 4,
+    "strengths": [
+     "Accurately identifies OAuth 2.0 as a delegated authorization framework",
+     "Explains the role of the identity provider and access tokens clearly",
+     "Well-structured and professional writing style"
+    ],
+    "improvements": [
+     "Mention that OAuth prevents exposing user passwords to third-party applications",
+     "Explain the concept of scopes for restricting access levels",
+     "Provide a common real-world example like logging in with Google"
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:03:12.652Z"
+  },
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "delegated authorization framework"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "issues access tokens to the requesting application"
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 2,
+    "clarity": 4,
+    "strengths": [
+     "Correctly identifies OAuth 2.0 as a delegated authorization framework",
+     "Accurately explains the role of the identity provider and access tokens",
+     "Clear and professional tone"
+    ],
+    "improvements": [
+     "Mention that it prevents sharing user passwords with third-party applications",
+     "Explain the concept of scopes for restricting access levels"
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:03:13.066Z"
+  },
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "delegated authorization framework"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "issues access tokens to the requesting application"
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 2,
+    "clarity": 4,
+    "strengths": [
+     "Accurately identifies OAuth 2.0 as a delegated authorization framework",
+     "Clear and professional writing style"
+    ],
+    "improvements": [
+     "Mention that it prevents sharing user credentials with third-party applications",
+     "Explain the role of scopes in restricting permissions"
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:03:13.087Z"
+  },
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "delegated authorization framework"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "issues access tokens to the requesting application"
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 2,
+    "clarity": 4,
+    "strengths": [
+     "Uses correct technical terminology like delegated authorization and access tokens.",
+     "Very clear and well-structured writing style."
+    ],
+    "improvements": [
+     "Mention that third-party applications can access resources without exposing user credentials.",
+     "Include the concept of scopes for restricting access levels."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:03:52.973Z"
+  },
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "OAuth 2.0 is primarily implemented as a delegated authorization framework."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "subsequently issues access tokens to the requesting application."
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 2,
+    "clarity": 4,
+    "strengths": [
+     "Accurately identifies OAuth 2.0 as a delegated authorization framework.",
+     "Correctly mentions the role of access tokens issued by an identity provider.",
+     "Very clear and professional writing style."
+    ],
+    "improvements": [
+     "Mention that OAuth prevents exposing user credentials to third-party applications.",
+     "Explain the concept of scopes for restricting access levels."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:03:53.049Z"
+  }
+ ]
+}

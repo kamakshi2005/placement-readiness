@@ -14,6 +14,7 @@ const skillResultSchema = new mongoose.Schema(
     resumeSkill: String, // the resume skill it matched (or the closest one, if missing)
     similarity: Number, // cosine similarity, 1 for exact/alias
     reason: String, // LLM judge's reason (borderline cases only)
+    judgeModel: String, // model version that gave the verdict (borderline cases only)
   },
   { _id: false }
 );
@@ -39,6 +40,10 @@ const analysisSchema = new mongoose.Schema(
       genModel: String,
       embedModel: String,
       embedDims: Number,
+      judgeModel: String, // primary model for the borderline judge
+      // model versions that ACTUALLY answered the two extraction calls (Google may serve a
+      // newer model behind a name, e.g. gemini-3.5-flash -> 3.6)
+      modelVersions: { resumeSkills: String, jdSkills: String },
       promptVersion: String,
       thresholds: { high: Number, low: Number },
       weights: { required: Number, nice_to_have: Number },

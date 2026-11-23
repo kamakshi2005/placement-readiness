@@ -1,0 +1,57 @@
+{
+ "kind": "generate",
+ "task": "score_b",
+ "promptStart": "Act as an independent second examiner. You have not seen any other examiner's marks.\nFirst look for factually incorrect statements in the candidate's answer, then check coverage, then rate it.\n\nerrors: each incorrect statement, quoted from the answer, with a one-line explanation of why it is wrong.\n",
+ "responses": [
+  {
+   "data": {
+    "errors": [],
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "OAuth 2.0 is primarily implemented as a delegated authorization framework."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "the flow relies on a central identity provider that authenticates the user and subsequently issues access tokens to the requesting application."
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "correctness": 4,
+    "depth": 2,
+    "clarity": 4,
+    "strengths": [
+     "Accurate definition of OAuth 2.0 as a delegated authorization framework.",
+     "Clear explanation of the role of the identity provider in issuing tokens.",
+     "Concise and professional terminology."
+    ],
+    "improvements": [
+     "Explicitly mention that OAuth 2.0 avoids the need to share user passwords with third-party applications.",
+     "Explain the concept of scopes as a mechanism to restrict access levels.",
+     "Provide a concrete example of a common OAuth 2.0 use case to improve depth."
+    ]
+   },
+   "meta": {
+    "task": "score_b",
+    "model": "gemini-3.1-flash-lite",
+    "modelVersion": "gemini-3.1-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:02:03.278Z"
+  }
+ ]
+}

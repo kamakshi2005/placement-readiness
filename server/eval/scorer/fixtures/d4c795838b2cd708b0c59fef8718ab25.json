@@ -1,0 +1,56 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "A Docker container acts as a lightweight executable package holding the application code and all its necessary dependencies."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "Its key function is providing complete environment consistency across development, testing, and production stages."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "Docker achieves high efficiency by sharing the host OS kernel instead of using full guest operating systems like traditional virtual machines."
+      ]
+     }
+    ],
+    "errors": [
+     {
+      "quote": "Docker containers communicate with each other primarily using the FTP protocol for internal networking.",
+      "explanation": "Docker containers do not communicate primarily using FTP; networking is typically handled via bridge, overlay, or host networks at the IP/port level."
+     }
+    ],
+    "correctness": 2,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Accurately captures all key points from the reference",
+     "Clear and well-structured writing style"
+    ],
+    "improvements": [
+     "Remove inaccurate statements regarding internal container networking protocols such as FTP"
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:01:53.113Z"
+  }
+ ]
+}

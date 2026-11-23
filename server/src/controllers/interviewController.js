@@ -6,6 +6,9 @@ import { PRESETS, TIME_LIMITS, GRACE_SEC, GAP_SHARE, MAX_ANSWER_CHARS } from '..
 import { buildPlan } from '../services/interviewPlanner.js';
 import { generateQuestions, QUESTION_PROMPT_VERSION, QUESTION_TEMPERATURE } from '../services/questionGenerator.js';
 import { modelInfo } from '../services/llm.js';
+import AnswerEvaluation from '../models/AnswerEvaluation.js';
+import { normalizeKeyPoints } from '../services/questionGenerator.js';
+import { queueSessionScoring } from '../services/scoring/evaluateSession.js';
 
 const httpError = (status, message, extra = {}) => Object.assign(new Error(message), { status, ...extra });
 
@@ -59,11 +62,14 @@ async function recordAnswer(session, idx, { text, status }) {
   const update = last
     ? { $set: { currentIndex: idx + 1, status: 'completed', completedAt: now } }
     : { $set: { currentIndex: idx + 1 } };
-  await InterviewSession.updateOne({ _id: session._id, currentIndex: idx, status: 'in_progress' }, update);
+  const res = await InterviewSession.updateOne({ _id: session._id, currentIndex: idx, status: 'in_progress' }, update);
   session.currentIndex = idx + 1;
   if (last) {
     session.status = 'completed';
     session.completedAt = now;
+    // Phase 1: score the finished interview in the background (only the request that
+    // actually completed it starts scoring, so a double submit can't start it twice)
+    if (res.modifiedCount) queueSessionScoring(session._id);
   }
 }
 
@@ -142,7 +148,7 @@ export async function startInterview(req, res) {
   const earlier = await InterviewSession.find({ user: req.user._id, analysis: analysis._id }).select('questions.text').lean();
   const previousQuestions = earlier.flatMap((s) => s.questions.map((q) => q.text)).slice(-30);
 
-  const written = await generateQuestions({ plan, analysis, previousQuestions });
+  const { questions: written, meta: qMeta } = await generateQuestions({ plan, analysis, previousQuestions });
 
   try {
     const session = await InterviewSession.create({
@@ -156,7 +162,9 @@ export async function startInterview(req, res) {
       attemptNumber: (await InterviewSession.countDocuments({ user: req.user._id })) + 1,
       questions: plan.map((p, i) => ({ ...p, text: written[i].text, reference: written[i].reference })),
       config: {
-        genModel: modelInfo().genModel,
+        genModel: modelInfo('questions').genModel,
+        questionModelVersion: qMeta.modelVersion, // the model that actually wrote them
+        ...(qMeta.repair && { repair: qMeta.repair }),
         promptVersion: QUESTION_PROMPT_VERSION,
         temperature: QUESTION_TEMPERATURE,
         gapShare: GAP_SHARE,
@@ -225,8 +233,105 @@ export async function abandonInterview(req, res) {
       { upsert: true }
     );
   }
-  await InterviewSession.updateOne({ _id: session._id, status: 'in_progress' }, { $set: { status: 'abandoned', completedAt: new Date() } });
+  const upd = await InterviewSession.updateOne({ _id: session._id, status: 'in_progress' }, { $set: { status: 'abandoned', completedAt: new Date() } });
+  if (upd.modifiedCount) queueSessionScoring(session._id); // answered questions still get scored
   res.json({ status: 'abandoned' });
+}
+
+// GET /api/interviews/:id/results — scoring progress + per-answer evaluations + per-skill table
+export async function getResults(req, res) {
+  const session = await loadOwnSession(req);
+  if (session.status === 'in_progress') throw httpError(409, 'The interview is still in progress');
+
+  const answers = await Answer.find({ session: session._id }).sort({ questionIndex: 1 }).lean();
+  const evalIds = answers.map((a) => a.evaluation).filter(Boolean);
+  const evals = new Map(
+    (await AnswerEvaluation.find({ _id: { $in: evalIds } }).select('-runs.raw').lean()).map((e) => [String(e._id), e])
+  );
+
+  const items = session.questions.map((q) => {
+    const a = answers.find((x) => x.questionIndex === q.index);
+    const e = a?.evaluation ? evals.get(String(a.evaluation)) : null;
+    return {
+      index: q.index,
+      category: q.category,
+      text: q.text,
+      skills: q.skills,
+      skillSource: q.skillSource,
+      difficulty: q.difficulty,
+      answer: a ? { text: a.text, status: a.status, timeTakenSec: a.timeTakenSec, referenceShown: a.referenceShown } : null,
+      evaluation: e
+        ? {
+            method: e.method,
+            autoReason: e.autoReason,
+            timedOut: e.timedOut,
+            score: e.score,
+            scoreMin: e.scoreMin,
+            scoreMax: e.scoreMax,
+            uncertain: e.uncertain,
+            uncertainReasons: e.uncertainReasons,
+            keyPoints: e.keyPoints,
+            errors: (e.errorSpans || []).filter((x) => x.accepted), // only majority-confirmed errors are shown
+            dimensions: e.dimensions,
+            feedback: e.feedback,
+            refSimilarity: e.refSimilarity,
+            runs: (e.runs || []).map((r) => ({ variant: r.variant, overall: r.overall })),
+            version: e.version,
+          }
+        : null,
+    };
+  });
+
+  // Per-skill summary: average score of the scored answers that tested each skill
+  const skills = new Map();
+  for (const it of items) {
+    if (!it.evaluation) continue;
+    for (const s of it.skills) {
+      const row = skills.get(s) || { skill: s, scores: [], uncertain: false };
+      row.scores.push(it.evaluation.score);
+      row.uncertain ||= it.evaluation.uncertain;
+      skills.set(s, row);
+    }
+  }
+  const scored = items.filter((it) => it.evaluation);
+  if (scored.length && session.user.equals(req.user._id) && !session.resultsViewedAt) {
+    await InterviewSession.updateOne({ _id: session._id, resultsViewedAt: { $exists: false } }, { $set: { resultsViewedAt: new Date() } });
+  }
+  res.json({
+    scoring: { status: session.scoring?.status || 'none', total: session.scoring?.total, done: session.scoring?.done, error: session.scoring?.error },
+    overall: scored.length ? Math.round(scored.reduce((t, it) => t + it.evaluation.score, 0) / scored.length) : null,
+    items,
+    skills: [...skills.values()].map((r) => ({
+      skill: r.skill,
+      questions: r.scores.length,
+      score: Math.round(r.scores.reduce((t, x) => t + x, 0) / r.scores.length),
+      min: Math.min(...r.scores),
+      max: Math.max(...r.scores),
+      uncertain: r.uncertain,
+    })),
+  });
+}
+
+// POST /api/interviews/:id/answers/:index/reference — returns the model answer and records
+// that the student saw it (referenceShown), so later phases can discount repeat questions.
+export async function showReference(req, res) {
+  const session = await loadOwnSession(req);
+  if (session.status === 'in_progress') throw httpError(409, 'Model answers are shown after the interview');
+  const idx = Number(req.params.index);
+  const q = await InterviewSession.findById(session._id).select('+questions.reference').lean();
+  const question = q?.questions?.[idx];
+  if (!question) throw httpError(404, 'Question not found');
+
+  // Only the student's own viewing counts (an admin looking doesn't mark it as seen)
+  if (session.user.equals(req.user._id)) {
+    await Answer.updateOne(
+      { session: session._id, questionIndex: idx, referenceShown: { $ne: true } },
+      { $set: { referenceShown: true, referenceShownAt: new Date() } }
+    );
+  }
+  res.json({
+    reference: { answer: question.reference?.answer || '', keyPoints: normalizeKeyPoints(question.reference?.keyPoints) },
+  });
 }
 
 // GET /api/interviews — the student's interviews, newest first

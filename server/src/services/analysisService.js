@@ -51,7 +51,14 @@ export async function runAnalysis({ user, resumeText: rawResume, resumeFileName,
     results: results.map(({ exact, ...r }) => r), // "exact" flag is internal only
     matchScore: computeScore(results),
     docSimilarity: Number(cosine(rv, jv).toFixed(4)),
-    config: { ...modelInfo(), promptVersion: PROMPT_VERSION, thresholds, weights: IMPORTANCE_WEIGHT },
+    config: {
+      ...modelInfo('extraction'),
+      judgeModel: modelInfo('judge').genModel,
+      modelVersions: { resumeSkills: resume.meta?.modelVersion || resume.meta?.model, jdSkills: jd.meta?.modelVersion || jd.meta?.model },
+      promptVersion: PROMPT_VERSION,
+      thresholds,
+      weights: IMPORTANCE_WEIGHT,
+    },
     cacheHits: { resumeSkills: resume.cacheHit, jdSkills: jd.cacheHit },
   });
 }

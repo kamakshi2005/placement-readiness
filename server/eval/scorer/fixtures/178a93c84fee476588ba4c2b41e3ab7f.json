@@ -1,0 +1,53 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "I first focus strictly on the basic concepts required to complete the immediate task instead of trying to master everything."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "I quickly build a basic proof-of-concept to test my initial understanding and ensure things work."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "I check official documentation, search on Stack Overflow, or reach out to senior engineers for quick guidance."
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Clearly covers all key points aligned with the reference.",
+     "Well-structured and professional approach to tight deadlines.",
+     "Concise and precise vocabulary."
+    ],
+    "improvements": [
+     "Incorporate a specific past example or project to add personal context.",
+     "Briefly mention how you handle technical debt if code is written quickly under pressure."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:02:53.065Z"
+  }
+ ]
+}

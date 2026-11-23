@@ -1,0 +1,14 @@
+{
+  "question": { "text": "How does a Docker container differ from a traditional virtual machine?", "category": "technical", "difficulty": "easy", "skills": ["Docker"] },
+  "reference": {
+    "answer": "Containers virtualise at the OS level: they share the host kernel and package only the app and its dependencies, so they are lightweight, start in seconds and allow high density. VMs virtualise hardware via a hypervisor and run a full guest OS each, so they are heavier and slower to boot but give stronger isolation.",
+    "keyPoints": [
+      { "id": "k1", "text": "Containers share the host OS kernel; VMs run a full guest OS" },
+      { "id": "k2", "text": "Containers are lightweight and start much faster" },
+      { "id": "k3", "text": "VMs use a hypervisor to virtualise hardware" },
+      { "id": "k4", "text": "VMs provide stronger isolation" }
+    ]
+  },
+  "answer": "A Docker container shares the kernel of the host operating system, while a virtual machine has its own full operating system. Because of this containers are much lighter and they start in a few seconds. Containers are also more secure than VMs because they are fully isolated from each other.",
+  "seedKey": "fixture-docker-1"
+}

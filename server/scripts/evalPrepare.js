@@ -4,6 +4,7 @@
 // Writes eval/pairs/<pairId>.json with extracted skills and label "TODO" for every JD skill.
 // You then replace each TODO with present / partial / absent (YOUR judgement, from the resume).
 import 'dotenv/config';
+import { defaultScriptMode } from '../src/services/llmRecorder.js';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -14,6 +15,9 @@ import { extractResumeSkills, extractJdSkills, PROMPT_VERSION } from '../src/ser
 import { dedupeSkills } from '../src/services/matcher.js';
 import { modelInfo } from '../src/services/llm.js';
 import { normalizeText } from '../src/utils/normalizeText.js';
+
+// AI calls: replay saved responses by default; real calls only with --live or --record
+defaultScriptMode();
 
 const [pdfPath, jdPath, pairId, split, studentName] = process.argv.slice(2);
 if (!pdfPath || !jdPath || !pairId || !['tune', 'holdout'].includes(split)) {

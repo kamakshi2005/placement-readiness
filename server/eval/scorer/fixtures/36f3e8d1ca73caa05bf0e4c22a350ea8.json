@@ -1,0 +1,51 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k4",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "errors": [],
+    "correctness": 0,
+    "depth": 0,
+    "clarity": 2,
+    "strengths": [
+     "The response is well-written and grammatically correct."
+    ],
+    "improvements": [
+     "Explain delegated authorization explicitly.",
+     "Mention the use of access tokens instead of sharing credentials.",
+     "Define the core purpose of OAuth 2.0 rather than general security."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:02:53.687Z"
+  }
+ ]
+}

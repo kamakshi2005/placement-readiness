@@ -1,0 +1,59 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "OAuth 2.0 is basically an open standard used for delegated authorization in modern web applications."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "Its core purpose is to enable third-party applications to access a user's resources from a service without needing the user's actual login passwords."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "In this setup, the user authenticates directly with the central identity provider, which then generates and issues an access token to the client app."
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "covered",
+      "evidence": [
+       "it restricts what data or actions the application can perform by utilizing specific permissions known as scopes"
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 4,
+    "clarity": 4,
+    "strengths": [
+     "Accurately covers all required key points of the OAuth 2.0 framework",
+     "Uses correct terminology such as delegated authorization, access tokens, and scopes",
+     "Well-structured and exceptionally clear explanation"
+    ],
+    "improvements": [
+     "Mention concrete real-world examples like 'Log in with Google' to add more practical context"
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:01:57.950Z"
+  }
+ ]
+}

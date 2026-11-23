@@ -7,6 +7,7 @@ import authRoutes from './routes/authRoutes.js';
 import analysisRoutes from './routes/analysisRoutes.js';
 import interviewRoutes from './routes/interviewRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
+import { resumePendingScoring } from './services/scoring/evaluateSession.js';
 
 // Tokens can't be signed or checked without a secret, so refuse to start
 if (!process.env.JWT_SECRET) {
@@ -46,6 +47,13 @@ app.use((err, req, res, next) => {
   });
 });
 
-connectDB().then(() => {
+connectDB().then((connected) => {
+  // continue any interview scoring that was interrupted by a restart
+  if (connected) {
+    const resume = () => resumePendingScoring().catch((e) => console.error('[scoring] resume check failed', e.message));
+    resume();
+    // also picks up sessions waiting for the daily AI quota to reset
+    setInterval(resume, 15 * 60 * 1000).unref();
+  }
   app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
 });

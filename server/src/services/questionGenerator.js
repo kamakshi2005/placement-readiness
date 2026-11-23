@@ -10,6 +10,19 @@ export const QUESTION_TEMPERATURE = 0.7; // some variety between attempts
 const QUESTION_WORDS = 'how|what|why|when|where|which|who|would|could|can|do|does|did|is|are|should|will';
 const JOINED_SECOND_QUESTION = new RegExp(`(?:,|;)?\\s+(?:and|or|also)\\s+(?:${QUESTION_WORDS})\\b`, 'i');
 
+/** Key points as explicit items with stable ids: ['a','b'] -> [{id:'k1',text:'a'}, {id:'k2',text:'b'}] */
+function withIds(points) {
+  return (points || [])
+    .map((k) => String(k).trim())
+    .filter(Boolean)
+    .map((text, i) => ({ id: `k${i + 1}`, text }));
+}
+
+/** Works for both new ({id,text}) and pre-Phase-1 (plain string) key points */
+export function normalizeKeyPoints(points) {
+  return (points || []).map((k, i) => (typeof k === 'string' ? { id: `k${i + 1}`, text: k } : { id: k.id, text: k.text }));
+}
+
 /**
  * Heuristic check for a two-part question. Flags:
  *  - more than one "?"                         ("What is X? How is it used?")
@@ -63,7 +76,8 @@ function describePlanItem(q, analysis) {
 }
 
 /**
- * @returns [{ index, text, reference: { answer, keyPoints } }] — one per plan item, same order
+ * @returns {{ questions: [{ index, text, reference: { answer, keyPoints } }], meta }} — one question per plan
+ *          item, same order; meta = which model wrote them (and the repair call, if any)
  */
 export async function generateQuestions({ plan, analysis, previousQuestions = [] }) {
   const prompt = `You are an interviewer for a campus placement interview (Indian MCA/B.Tech freshers).
@@ -93,7 +107,8 @@ ${analysis.resumeText.slice(0, RESUME_CHARS)}
 Items:
 ${plan.map((q) => describePlanItem(q, analysis)).join('\n')}`;
 
-  const out = await generateJSON({
+  const { data: out, meta } = await generateJSON({
+    task: 'questions',
     prompt,
     temperature: QUESTION_TEMPERATURE,
     schema: {
@@ -128,14 +143,15 @@ ${plan.map((q) => describePlanItem(q, analysis)).join('\n')}`;
     return {
       index: p.index,
       text: q.question.trim(),
-      reference: { answer: q.referenceAnswer.trim(), keyPoints: (q.keyPoints || []).map((k) => k.trim()).filter(Boolean) },
+      reference: { answer: q.referenceAnswer.trim(), keyPoints: withIds(q.keyPoints) },
     };
   });
 
   // Code check: rewrite any two-part questions (one extra call, only when needed)
   const flagged = questions.filter((q) => isMultiPart(q.text));
-  if (flagged.length) questions = await repairMultiPart(questions, flagged, plan);
-  return questions;
+  let repairMeta;
+  if (flagged.length) ({ questions, meta: repairMeta } = await repairMultiPart(questions, flagged, plan));
+  return { questions, meta: { model: meta.model, modelVersion: meta.modelVersion, ...(repairMeta && { repair: repairMeta }) } };
 }
 
 /**
@@ -145,7 +161,8 @@ ${plan.map((q) => describePlanItem(q, analysis)).join('\n')}`;
  * than a failed interview) — the count is logged so it can be monitored.
  */
 export async function repairMultiPart(questions, flagged, plan) {
-  const out = await generateJSON({
+  const { data: out, meta } = await generateJSON({
+    task: 'questions',
     prompt: `Each interview question below asks two things at once. Rewrite each as exactly ONE question
 (one "?", no "and how/what/why…"), keeping the same topic, skill and difficulty, and the more important
 of the two parts. Then write a new model answer (80-150 words) and 3-5 key points for the NEW question.
@@ -192,9 +209,9 @@ ${flagged
     return {
       index: q.index,
       text: f.question.trim(),
-      reference: { answer: f.referenceAnswer.trim(), keyPoints: f.keyPoints.map((k) => k.trim()).filter(Boolean) },
+      reference: { answer: f.referenceAnswer.trim(), keyPoints: withIds(f.keyPoints) },
     };
   });
   console.log(`[questions] multi-part: ${flagged.length} flagged, ${flagged.length - stillBad} rewritten, ${stillBad} kept as is`);
-  return result;
+  return { questions: result, meta: { model: meta.model, modelVersion: meta.modelVersion, flagged: flagged.length, rewritten: flagged.length - stillBad } };
 }

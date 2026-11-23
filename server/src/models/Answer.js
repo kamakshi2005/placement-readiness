@@ -32,6 +32,18 @@ const answerSchema = new mongoose.Schema(
     submittedAt: Date,
     timeTakenSec: Number,
     timeLimitSec: Number,
+
+    // ---- Phase 1 scoring (copied from the latest AnswerEvaluation, for quick queries) ----
+    evaluation: { type: mongoose.Schema.Types.ObjectId, ref: 'AnswerEvaluation' },
+    score: Number, // 0–100
+    scoreMin: Number, // lowest / highest overall score across the scoring runs
+    scoreMax: Number,
+    uncertain: Boolean,
+
+    // The student has seen the model answer for this question. Later phases discount repeat
+    // questions whose answer the student already saw.
+    referenceShown: { type: Boolean, default: false },
+    referenceShownAt: Date,
   },
   { timestamps: true }
 );

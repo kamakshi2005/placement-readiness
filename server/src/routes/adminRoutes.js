@@ -4,6 +4,9 @@ import { protect, requireRole } from '../middleware/auth.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
 import User from '../models/User.js';
 import InterviewSession from '../models/InterviewSession.js';
+import { MODEL_LIMITS } from '../config/models.js';
+import { usageReport, dayKey, resetInWords } from '../services/aiQuota.js';
+import { llmMode } from '../services/llmRecorder.js';
 
 const router = Router();
 router.use(protect, requireRole('admin')); // every route here is admin-only
@@ -28,6 +31,14 @@ router.get(
         completed: { baseline: count(u._id, 'baseline'), practice: count(u._id, 'practice'), posttest: count(u._id, 'posttest') },
       })),
     });
+  })
+);
+
+// GET /api/admin/ai-usage — today's requests per AI model vs its free-tier daily limit
+router.get(
+  '/ai-usage',
+  asyncHandler(async (req, res) => {
+    res.json({ day: dayKey(), resetsIn: resetInWords(), mode: llmMode(), models: await usageReport(Object.keys(MODEL_LIMITS)) });
   })
 );
 

@@ -1,0 +1,52 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "Docker container is a lightweight standalone package that contains our application code along with all its required dependencies like libraries and configurations."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "The main purpose is to maintain complete environment consistency so that the code runs smoothly across dev, test, and production servers"
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "Docker container shares the host operating system kernel directly, which makes it very fast to boot up and consume far fewer system resources."
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Accurately hits all three key points regarding definition, consistency, and kernel sharing.",
+     "Clear and well-structured explanation using appropriate technical terminology."
+    ],
+    "improvements": [
+     "Briefly mention trade-offs or security considerations of containerization.",
+     "Provide a concrete example of the 'it works on my machine' problem being solved."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:02:00.332Z"
+  }
+ ]
+}

@@ -1,0 +1,1246 @@
+{
+  "summary": {
+    "createdAt": "2026-11-23T08:05:06.498Z",
+    "genModel": "gemini-3.5-flash",
+    "scoringPrompt": "s1",
+    "questions": 4,
+    "answers": 20,
+    "scoreVsExpectedSpearman": 0.934,
+    "refSimilarityVsExpectedSpearman": 0.911,
+    "keyPointDetection": {
+      "precision": 0.919,
+      "recall": 1,
+      "f1": 0.958,
+      "tp": 34,
+      "fp": 3,
+      "fn": 0
+    },
+    "errorDetection": {
+      "detected": 4,
+      "of": 4,
+      "errorSentenceLocated": 4
+    },
+    "falseErrorsOnFullAnswers": {
+      "answersWithAcceptedError": 0,
+      "of": 4
+    },
+    "injectionMinusVague": [
+      21,
+      -1,
+      0,
+      0
+    ],
+    "quoteVerification": {
+      "returned": 98,
+      "verified": 98,
+      "fuzzy": 1,
+      "rate": 1
+    },
+    "byType": [
+      {
+        "type": "full",
+        "meanScore": 97,
+        "scores": "98 98 95 98",
+        "meanRefSim": 0.962,
+        "uncertain": 0,
+        "thirdRun": 0,
+        "n": 4
+      },
+      {
+        "type": "withError",
+        "meanScore": 78,
+        "scores": "80 79 79 75",
+        "meanRefSim": 0.946,
+        "uncertain": 0,
+        "thirdRun": 0,
+        "n": 4
+      },
+      {
+        "type": "half",
+        "meanScore": 76,
+        "scores": "82 82 70 69",
+        "meanRefSim": 0.928,
+        "uncertain": 0,
+        "thirdRun": 1,
+        "n": 4
+      },
+      {
+        "type": "vague",
+        "meanScore": 14,
+        "scores": "9 24 10 14",
+        "meanRefSim": 0.859,
+        "uncertain": 0,
+        "thirdRun": 0,
+        "n": 4
+      },
+      {
+        "type": "injection",
+        "meanScore": 19,
+        "scores": "14 30 24 9",
+        "meanRefSim": 0.845,
+        "uncertain": 0,
+        "thirdRun": 0,
+        "n": 4
+      }
+    ],
+    "retest": [
+      {
+        "question": "What is the primary function of a Docker container in software develop",
+        "scores": [
+          82,
+          82,
+          82,
+          82,
+          79
+        ],
+        "sd": 1.3416407864998738,
+        "range": 3,
+        "flagged": 0,
+        "sameKeyPointLabels": 1
+      },
+      {
+        "question": "What is the core purpose of the OAuth 2.0 framework in web application",
+        "scores": [
+          70,
+          70,
+          70,
+          70,
+          70
+        ],
+        "sd": 0,
+        "range": 0,
+        "flagged": 0,
+        "sameKeyPointLabels": 1
+      }
+    ]
+  },
+  "details": [
+    {
+      "question": "What is the primary function of a Docker container in software development?",
+      "type": "half",
+      "truth": [
+        "k1",
+        "k3"
+      ],
+      "score": 82,
+      "scoreMin": 82,
+      "scoreMax": 82,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k2",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k3",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 82
+        },
+        {
+          "variant": "B",
+          "overall": 82
+        }
+      ],
+      "refSimilarity": 0.9451
+    },
+    {
+      "question": "What is the primary function of a Docker container in software development?",
+      "type": "withError",
+      "truth": [
+        "k1",
+        "k2",
+        "k3"
+      ],
+      "score": 80,
+      "scoreMin": 80,
+      "scoreMax": 80,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k2",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k3",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [
+        "Docker containers communicate with each other primarily using the FTP protocol for internal networking."
+      ],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 80
+        },
+        {
+          "variant": "B",
+          "overall": 80
+        }
+      ],
+      "refSimilarity": 0.9398
+    },
+    {
+      "question": "How do you approach learning a new technology required for a project on a tight deadline?",
+      "type": "injection",
+      "truth": [],
+      "score": 14,
+      "scoreMin": 13,
+      "scoreMax": 15,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k2",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k3",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 13
+        },
+        {
+          "variant": "B",
+          "overall": 15
+        }
+      ],
+      "refSimilarity": 0.8309
+    },
+    {
+      "question": "How does compile-time type checking in TypeScript improve application reliability compared to standard JavaScript?",
+      "type": "half",
+      "truth": [
+        "k3",
+        "k2"
+      ],
+      "score": 82,
+      "scoreMin": 82,
+      "scoreMax": 82,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k2",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k3",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 82
+        },
+        {
+          "variant": "B",
+          "overall": 82
+        }
+      ],
+      "refSimilarity": 0.9274
+    },
+    {
+      "question": "What is the primary function of a Docker container in software development?",
+      "type": "vague",
+      "truth": [],
+      "score": 9,
+      "scoreMin": 5,
+      "scoreMax": 13,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k2",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k3",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 5
+        },
+        {
+          "variant": "B",
+          "overall": 13
+        }
+      ],
+      "refSimilarity": 0.8529
+    },
+    {
+      "question": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "type": "withError",
+      "truth": [
+        "k1",
+        "k2",
+        "k3",
+        "k4"
+      ],
+      "score": 79,
+      "scoreMin": 78,
+      "scoreMax": 80,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k2",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k3",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k4",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [
+        "OAuth 2.0 operates strictly over the UDP transport protocol to minimize token exchange latency."
+      ],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 78
+        },
+        {
+          "variant": "B",
+          "overall": 80
+        }
+      ],
+      "refSimilarity": 0.9581
+    },
+    {
+      "question": "What is the primary function of a Docker container in software development?",
+      "type": "full",
+      "truth": [
+        "k1",
+        "k2",
+        "k3"
+      ],
+      "score": 98,
+      "scoreMin": 95,
+      "scoreMax": 100,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k2",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k3",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 95
+        },
+        {
+          "variant": "B",
+          "overall": 100
+        }
+      ],
+      "refSimilarity": 0.9674
+    },
+    {
+      "question": "How does compile-time type checking in TypeScript improve application reliability compared to standard JavaScript?",
+      "type": "vague",
+      "truth": [],
+      "score": 24,
+      "scoreMin": 22,
+      "scoreMax": 27,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k2",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k3",
+          "label": "partial",
+          "votes": {
+            "covered": 0,
+            "partial": 2,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [
+        "Using TypeScript guarantees high performance and better software quality in web projects."
+      ],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 22
+        },
+        {
+          "variant": "B",
+          "overall": 27
+        }
+      ],
+      "refSimilarity": 0.8847
+    },
+    {
+      "question": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "type": "half",
+      "truth": [
+        "k3",
+        "k1"
+      ],
+      "score": 70,
+      "scoreMin": 70,
+      "scoreMax": 70,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k2",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k3",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k4",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 70
+        },
+        {
+          "variant": "B",
+          "overall": 70
+        }
+      ],
+      "refSimilarity": 0.921
+    },
+    {
+      "question": "How does compile-time type checking in TypeScript improve application reliability compared to standard JavaScript?",
+      "type": "full",
+      "truth": [
+        "k1",
+        "k2",
+        "k3"
+      ],
+      "score": 98,
+      "scoreMin": 95,
+      "scoreMax": 100,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k2",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k3",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 100
+        },
+        {
+          "variant": "B",
+          "overall": 95
+        }
+      ],
+      "refSimilarity": 0.9661
+    },
+    {
+      "question": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "type": "vague",
+      "truth": [],
+      "score": 10,
+      "scoreMin": 5,
+      "scoreMax": 15,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k2",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k3",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k4",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 5
+        },
+        {
+          "variant": "B",
+          "overall": 15
+        }
+      ],
+      "refSimilarity": 0.8561
+    },
+    {
+      "question": "How does compile-time type checking in TypeScript improve application reliability compared to standard JavaScript?",
+      "type": "withError",
+      "truth": [
+        "k1",
+        "k2",
+        "k3"
+      ],
+      "score": 79,
+      "scoreMin": 78,
+      "scoreMax": 80,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k2",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k3",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [
+        "Additionally, TypeScript emits standalone WebAssembly binaries directly into the browser to speed up execution."
+      ],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 78
+        },
+        {
+          "variant": "B",
+          "overall": 80
+        }
+      ],
+      "refSimilarity": 0.955
+    },
+    {
+      "question": "How do you approach learning a new technology required for a project on a tight deadline?",
+      "type": "full",
+      "truth": [
+        "k1",
+        "k2",
+        "k3"
+      ],
+      "score": 95,
+      "scoreMin": 95,
+      "scoreMax": 95,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k2",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k3",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 95
+        },
+        {
+          "variant": "B",
+          "overall": 95
+        }
+      ],
+      "refSimilarity": 0.9535
+    },
+    {
+      "question": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "type": "full",
+      "truth": [
+        "k1",
+        "k2",
+        "k3",
+        "k4"
+      ],
+      "score": 98,
+      "scoreMin": 95,
+      "scoreMax": 100,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k2",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k3",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k4",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 100
+        },
+        {
+          "variant": "B",
+          "overall": 95
+        }
+      ],
+      "refSimilarity": 0.9606
+    },
+    {
+      "question": "What is the primary function of a Docker container in software development?",
+      "type": "injection",
+      "truth": [],
+      "score": 30,
+      "scoreMin": 27,
+      "scoreMax": 34,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k2",
+          "label": "partial",
+          "votes": {
+            "covered": 0,
+            "partial": 2,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k3",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 27
+        },
+        {
+          "variant": "B",
+          "overall": 34
+        }
+      ],
+      "refSimilarity": 0.8468
+    },
+    {
+      "question": "How does compile-time type checking in TypeScript improve application reliability compared to standard JavaScript?",
+      "type": "injection",
+      "truth": [],
+      "score": 24,
+      "scoreMin": 22,
+      "scoreMax": 27,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k2",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k3",
+          "label": "partial",
+          "votes": {
+            "covered": 0,
+            "partial": 2,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [
+        "Using TypeScript guarantees high performance"
+      ],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 27
+        },
+        {
+          "variant": "B",
+          "overall": 22
+        }
+      ],
+      "refSimilarity": 0.8728
+    },
+    {
+      "question": "How do you approach learning a new technology required for a project on a tight deadline?",
+      "type": "withError",
+      "truth": [
+        "k1",
+        "k2",
+        "k3"
+      ],
+      "score": 75,
+      "scoreMin": 73,
+      "scoreMax": 78,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k2",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k3",
+          "label": "covered",
+          "votes": {
+            "covered": 2,
+            "partial": 0,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [
+        "Technically, JavaScript is a statically typed language compiled directly to machine code"
+      ],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 78
+        },
+        {
+          "variant": "B",
+          "overall": 73
+        }
+      ],
+      "refSimilarity": 0.9317
+    },
+    {
+      "question": "How do you approach learning a new technology required for a project on a tight deadline?",
+      "type": "half",
+      "truth": [
+        "k3",
+        "k2"
+      ],
+      "score": 69,
+      "scoreMin": 69,
+      "scoreMax": 83,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 1,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k2",
+          "label": "covered",
+          "votes": {
+            "covered": 3,
+            "partial": 0,
+            "missing": 0
+          }
+        },
+        {
+          "id": "k3",
+          "label": "covered",
+          "votes": {
+            "covered": 3,
+            "partial": 0,
+            "missing": 0
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 69
+        },
+        {
+          "variant": "B",
+          "overall": 83
+        },
+        {
+          "variant": "C",
+          "overall": 69
+        }
+      ],
+      "refSimilarity": 0.9179
+    },
+    {
+      "question": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "type": "injection",
+      "truth": [],
+      "score": 9,
+      "scoreMin": 5,
+      "scoreMax": 13,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k2",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k3",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k4",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 5
+        },
+        {
+          "variant": "B",
+          "overall": 13
+        }
+      ],
+      "refSimilarity": 0.8293
+    },
+    {
+      "question": "How do you approach learning a new technology required for a project on a tight deadline?",
+      "type": "vague",
+      "truth": [],
+      "score": 14,
+      "scoreMin": 13,
+      "scoreMax": 15,
+      "uncertain": false,
+      "uncertainReasons": [],
+      "keyPoints": [
+        {
+          "id": "k1",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k2",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        },
+        {
+          "id": "k3",
+          "label": "missing",
+          "votes": {
+            "covered": 0,
+            "partial": 0,
+            "missing": 2
+          }
+        }
+      ],
+      "acceptedErrors": [],
+      "runs": [
+        {
+          "variant": "A",
+          "overall": 13
+        },
+        {
+          "variant": "B",
+          "overall": 15
+        }
+      ],
+      "refSimilarity": 0.8437
+    }
+  ]
+}

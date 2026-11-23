@@ -8,6 +8,8 @@ import {
   abandonInterview,
   listInterviews,
   getInterview,
+  getResults,
+  showReference,
 } from '../controllers/interviewController.js';
 
 const router = Router();
@@ -19,5 +21,7 @@ router.get('/:id', asyncHandler(getInterview));
 router.get('/:id/current', asyncHandler(getCurrent));
 router.post('/:id/answer', asyncHandler(submitAnswer));
 router.post('/:id/abandon', asyncHandler(abandonInterview));
+router.get('/:id/results', asyncHandler(getResults));
+router.post('/:id/answers/:index/reference', asyncHandler(showReference));
 
 export default router;

@@ -1,0 +1,54 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "partial",
+      "evidence": [
+       "makes our applications much more reliable and robust"
+      ]
+     }
+    ],
+    "errors": [
+     {
+      "quote": "Using TypeScript guarantees high performance",
+      "explanation": "TypeScript itself does not guarantee high performance, as code is compiled down to standard JavaScript and runs on the same engines."
+     }
+    ],
+    "correctness": 1,
+    "depth": 1,
+    "clarity": 3,
+    "strengths": [
+     "Well-structured and fluent writing style.",
+     "Correctly identifies that TypeScript improves application reliability."
+    ],
+    "improvements": [
+     "Explain how compile-time type checking differs from dynamic typing in JavaScript.",
+     "Discuss how catching errors before runtime prevents production bugs.",
+     "Mention specific developer tooling benefits like IDE autocomplete."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T08:02:56.077Z"
+  }
+ ]
+}
