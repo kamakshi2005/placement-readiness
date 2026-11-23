@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { api } from '../lib/api.js';
+import StartInterview from '../components/StartInterview.jsx';
+import { useAuth } from '../context/AuthContext.jsx';
 
 const STATUS_STYLE = {
   matched: 'bg-green-100 text-green-800',
@@ -46,6 +48,7 @@ function evidence(r, thresholds) {
 
 export default function AnalysisDetail() {
   const { id } = useParams();
+  const { user } = useAuth();
   const [a, setA] = useState(null);
   const [error, setError] = useState('');
 
@@ -116,6 +119,9 @@ export default function AnalysisDetail() {
           </div>
         </div>
       )}
+
+      {/* Next step: interview driven by the gaps above (owner only) */}
+      {a.user === user?._id && <StartInterview analysisId={a._id} />}
 
       {/* Per-skill explanation */}
       <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">

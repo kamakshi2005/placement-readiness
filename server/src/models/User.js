@@ -8,6 +8,9 @@ const userSchema = new mongoose.Schema(
     // select: false -> the hash is never returned by queries unless asked for explicitly
     password: { type: String, required: true, minlength: 8, select: false },
     role: { type: String, enum: ['student', 'admin'], default: 'student' },
+    // Evaluation study group, set by an admin. null = not in the study (free practice).
+    // A = general-mode practice, B = targeted practice (Module 5).
+    studyGroup: { type: String, enum: ['A', 'B', null], default: null },
   },
   { timestamps: true }
 );

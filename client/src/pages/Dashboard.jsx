@@ -7,13 +7,19 @@ import { api } from '../lib/api.js';
 export default function Dashboard() {
   const { user } = useAuth();
   const [analyses, setAnalyses] = useState(null);
+  const [interviews, setInterviews] = useState(null);
   const [error, setError] = useState('');
 
   useEffect(() => {
     api('/analysis')
       .then((d) => setAnalyses(d.analyses))
       .catch((e) => setError(e.message));
+    api('/interviews')
+      .then((d) => setInterviews(d.interviews))
+      .catch((e) => setError(e.message));
   }, []);
+
+  const STATUS = { in_progress: 'in progress', completed: 'completed', abandoned: 'abandoned' };
 
   return (
     <div className="space-y-6">
@@ -30,6 +36,36 @@ export default function Dashboard() {
           New resume–JD analysis
         </Link>
       </div>
+
+      {interviews?.length > 0 && (
+        <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 className="font-semibold text-slate-900">Your interviews</h2>
+          <ul className="mt-3 divide-y divide-slate-100">
+            {interviews.map((iv) => (
+              <li key={iv._id}>
+                <Link to={`/interview/${iv._id}`} className="flex items-center justify-between gap-4 py-3 hover:bg-slate-50">
+                  <div className="min-w-0">
+                    <p className="truncate font-medium text-slate-900">
+                      Attempt {iv.attemptNumber} · {iv.jdTitle || 'Untitled job'}
+                    </p>
+                    <p className="text-xs text-slate-500">
+                      {new Date(iv.createdAt).toLocaleDateString()} · {iv.phase} · {iv.mode === 'gap' ? 'gap-focused' : iv.mode} ·{' '}
+                      {iv.total} questions
+                    </p>
+                  </div>
+                  <span
+                    className={`shrink-0 rounded px-2 py-0.5 text-xs font-medium ${
+                      iv.status === 'in_progress' ? 'bg-amber-100 text-amber-800' : iv.status === 'completed' ? 'bg-green-100 text-green-800' : 'bg-slate-100 text-slate-600'
+                    }`}
+                  >
+                    {iv.status === 'in_progress' ? `continue (Q${iv.currentIndex + 1})` : STATUS[iv.status]}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
         <h2 className="font-semibold text-slate-900">Your analyses</h2>

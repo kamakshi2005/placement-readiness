@@ -1,6 +1,6 @@
-# AI Mock Interview & Placement Readiness Platform
+# Adaptive Interview-Prep Engine
 
-MCA final year project. JD-targeted mock interviews with explainable feedback and an adaptive retest loop that measures per-skill improvement.
+JD-driven mock interviews with evidence-grounded, uncertainty-aware scoring, per-skill mastery tracking and adaptive question selection. Work in progress; see `CLAUDE.md` for the roadmap.
 
 ## Structure
 - `client/` – React (Vite) + Tailwind CSS

@@ -27,6 +27,7 @@ export async function api(path, { method = 'GET', body } = {}) {
   if (!res.ok) {
     const err = new Error(data.message || `Request failed (${res.status})`);
     err.status = res.status;
+    err.data = data; // extra fields, e.g. sessionId of an interview already in progress
     throw err;
   }
   return data;

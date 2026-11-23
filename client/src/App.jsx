@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard.jsx';
 import AdminHome from './pages/AdminHome.jsx';
 import Analyze from './pages/Analyze.jsx';
 import AnalysisDetail from './pages/AnalysisDetail.jsx';
+import Interview from './pages/Interview.jsx';
 import SetupCheck from './pages/SetupCheck.jsx';
 
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/analyze" element={<Analyze />} />
           <Route path="/analysis/:id" element={<AnalysisDetail />} />
+          <Route path="/interview/:id" element={<Interview />} />
           <Route
             path="/admin"
             element={

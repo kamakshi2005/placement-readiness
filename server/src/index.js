@@ -5,6 +5,8 @@ import mongoose from 'mongoose';
 import { connectDB } from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
 import analysisRoutes from './routes/analysisRoutes.js';
+import interviewRoutes from './routes/interviewRoutes.js';
+import adminRoutes from './routes/adminRoutes.js';
 
 // Tokens can't be signed or checked without a secret, so refuse to start
 if (!process.env.JWT_SECRET) {
@@ -28,14 +30,20 @@ app.get('/api/health', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/analysis', analysisRoutes);
+app.use('/api/interviews', interviewRoutes);
+app.use('/api/admin', adminRoutes);
 
 // 404 for unknown API routes
 app.use('/api', (req, res) => res.status(404).json({ message: 'Route not found' }));
 
 // central error handler
 app.use((err, req, res, next) => {
-  console.error(err);
-  res.status(err.status || 500).json({ message: err.message || 'Server error' });
+  const status = err.status || 500;
+  if (status >= 500) console.error(err); // 4xx are expected user errors, not worth a stack trace
+  res.status(status).json({
+    message: status >= 500 && !err.status ? 'Server error' : err.message,
+    ...(err.sessionId && { sessionId: err.sessionId }), // e.g. "interview already in progress"
+  });
 });
 
 connectDB().then(() => {
