@@ -114,3 +114,19 @@ test('a run missing a key point counts it as missing', () => {
   assert.deepEqual(r.keyPoints[2].votes, { covered: 1, partial: 0, missing: 1 });
   assert.equal(r.keyPoints[2].label, 'missing'); // even split -> lower (conservative)
 });
+
+test('scoringConfidence: full agreement = 1; spread and key-point disagreement lower it', async () => {
+  const { scoringConfidence } = await import('../src/services/scoring/aggregate.js');
+  const a = run(['covered', 'covered', 'missing'], { correctness: 3, depth: 3, clarity: 3 });
+  assert.deepEqual(scoringConfidence([a, a]), { value: 1, abSpread: 0, kpDisagreementAB: 0, thirdRun: false });
+  // B: one of 3 labels differs, 20 points apart -> 1 - 0.5*0.5 - 0.5*(1/3)
+  const b = { ...a, overall: a.overall - 20, keyPoints: a.keyPoints.map((k, i) => (i === 0 ? { ...k, label: 'partial' } : k)) };
+  const c = scoringConfidence([a, b, a]);
+  assert.equal(c.abSpread, 20);
+  assert.equal(c.kpDisagreementAB, 0.333);
+  assert.equal(c.value, 0.583);
+  assert.equal(c.thirdRun, true);
+  // never below 0
+  const far = { ...b, overall: a.overall - 100, keyPoints: a.keyPoints.map((k) => ({ ...k, label: k.label === 'missing' ? 'covered' : 'missing' })) };
+  assert.equal(scoringConfidence([a, far]).value, 0);
+});

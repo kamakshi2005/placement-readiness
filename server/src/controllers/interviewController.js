@@ -270,6 +270,7 @@ export async function getResults(req, res) {
             scoreMax: e.scoreMax,
             uncertain: e.uncertain,
             uncertainReasons: e.uncertainReasons,
+            confidence: e.confidence,
             keyPoints: e.keyPoints,
             errors: (e.errorSpans || []).filter((x) => x.accepted), // only majority-confirmed errors are shown
             dimensions: e.dimensions,

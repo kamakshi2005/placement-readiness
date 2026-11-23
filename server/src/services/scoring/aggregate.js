@@ -24,6 +24,24 @@ export function computeOverall({ coverage, correctness, depth, clarity }) {
   );
 }
 
+/**
+ * Continuous scoring confidence from runs A and B, measured BEFORE a 3rd run can settle their
+ * disagreement (so it keeps the signal the boolean "uncertain" flag throws away).
+ *   abSpread          points between A's and B's overall scores
+ *   kpDisagreementAB  share of key points where A and B gave different labels (0–1)
+ *   value             1 − ½·min(abSpread / CONF_SPREAD_SCALE, 1) − ½·kpDisagreementAB   (0–1)
+ * The ½ / ½ weights and the 40-point scale are provisional; to be checked against hand labels.
+ */
+export const CONF_SPREAD_SCALE = 40;
+export function scoringConfidence(runs) {
+  const [a, b] = runs;
+  const abSpread = Math.abs(a.overall - b.overall);
+  const bLabel = new Map(b.keyPoints.map((k) => [k.id, k.label]));
+  const kpDisagreementAB = a.keyPoints.length ? a.keyPoints.filter((k) => bLabel.get(k.id) !== k.label).length / a.keyPoints.length : 0;
+  const value = Math.max(0, 1 - 0.5 * Math.min(abSpread / CONF_SPREAD_SCALE, 1) - 0.5 * kpDisagreementAB);
+  return { value: Math.round(value * 1000) / 1000, abSpread, kpDisagreementAB: Math.round(kpDisagreementAB * 1000) / 1000, thirdRun: runs.length > 2 };
+}
+
 /** After 2 runs: is a 3rd run needed? (scores far apart, or any key-point label differs) */
 export function needThirdRun([r1, r2]) {
   if (Math.abs(r1.overall - r2.overall) > THIRD_RUN_SCORE_GAP) return true;
@@ -115,6 +133,7 @@ export function aggregateRuns(runs, keyPoints, answer) {
     scoreMax,
     uncertain: uncertainReasons.length > 0,
     uncertainReasons,
+    confidence: scoringConfidence(runs),
     feedback: { strengths: rep.strengths || [], improvements: rep.improvements || [] },
   };
 }

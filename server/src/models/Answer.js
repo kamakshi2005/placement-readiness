@@ -39,6 +39,7 @@ const answerSchema = new mongoose.Schema(
     scoreMin: Number, // lowest / highest overall score across the scoring runs
     scoreMax: Number,
     uncertain: Boolean,
+    scoreConfidence: Number, // 0–1, from the evaluation (Phase 2 uses it as evidence weight)
 
     // The student has seen the model answer for this question. Later phases discount repeat
     // questions whose answer the student already saw.

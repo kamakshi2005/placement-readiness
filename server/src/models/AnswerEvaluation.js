@@ -83,6 +83,9 @@ const answerEvaluationSchema = new mongoose.Schema(
     scoreMax: Number,
     uncertain: Boolean,
     uncertainReasons: [String],
+    // continuous confidence from runs A/B before any tie-break (aggregate.js scoringConfidence);
+    // 1 for automatic scores. The boolean `uncertain` flag above is kept unchanged.
+    confidence: { value: Number, abSpread: Number, kpDisagreementAB: Number, thirdRun: Boolean },
     manipulationFlags: [String], // phrases addressed to the examiner (scoring/manipulation.js)
 
     feedback: {

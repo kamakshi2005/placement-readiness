@@ -67,6 +67,7 @@ export async function evaluateAnswer(answerDoc, question) {
       scoreMax: 0,
       uncertain: false,
       uncertainReasons: [],
+      confidence: { value: 1, abSpread: 0, kpDisagreementAB: 0, thirdRun: false }, // no judgement involved
       feedback: { strengths: [], improvements: [] },
       config: { promptVersion: SCORING_PROMPT_VERSION },
     };
@@ -90,6 +91,7 @@ export async function evaluateAnswer(answerDoc, question) {
         scoreMin: evaluation.scoreMin,
         scoreMax: evaluation.scoreMax,
         uncertain: evaluation.uncertain,
+        scoreConfidence: evaluation.confidence?.value,
       },
     }
   );
