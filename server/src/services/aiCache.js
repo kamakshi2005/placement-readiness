@@ -7,6 +7,8 @@ import LlmCache from '../models/LlmCache.js';
 import { embed, modelInfo } from './llm.js';
 import { modelsForTask } from '../config/models.js';
 
+export const UNKNOWN_VERSION = 'unknown (pre-versioning)';
+
 export const sha256 = (s) => crypto.createHash('sha256').update(s).digest('hex');
 
 /**
@@ -19,7 +21,8 @@ export async function cachedCall({ kind, task, promptVersion, input, fn }) {
   const key = sha256([kind, model, promptVersion, input].join('|'));
 
   const hit = await LlmCache.findOne({ key }).lean();
-  if (hit) return { value: hit.value, cacheHit: true, meta: hit.meta || { model: hit.model } };
+  // entries cached before versions were recorded have no meta: say so instead of guessing
+  if (hit) return { value: hit.value, cacheHit: true, meta: hit.meta || { model: hit.model, modelVersion: UNKNOWN_VERSION } };
 
   const { data, meta } = await fn();
   // upsert: two requests racing on the same input won't fail on the unique key

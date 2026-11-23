@@ -54,7 +54,7 @@ export async function runAnalysis({ user, resumeText: rawResume, resumeFileName,
     config: {
       ...modelInfo('extraction'),
       judgeModel: modelInfo('judge').genModel,
-      modelVersions: { resumeSkills: resume.meta?.modelVersion || resume.meta?.model, jdSkills: jd.meta?.modelVersion || jd.meta?.model },
+      modelVersions: { resumeSkills: resume.meta?.modelVersion, jdSkills: jd.meta?.modelVersion },
       promptVersion: PROMPT_VERSION,
       thresholds,
       weights: IMPORTANCE_WEIGHT,

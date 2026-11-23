@@ -1,0 +1,51 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "Docker container is essentially a lightweight executable package which bundles the application code along with all system dependencies and libraries required for execution."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "Unlike traditional virtual machines which require their own full guest operating system, Docker containers directly share the underlying host operating system kernel."
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Accurately describes container architecture and dependency bundling",
+     "Clear distinction between containers and traditional virtual machines",
+     "Well-structured and easy to read"
+    ],
+    "improvements": [
+     "Mention how containers ensure environment consistency across development, testing, and production",
+     "Discuss portability benefits for deployment"
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:30:13.889Z"
+  }
+ ]
+}

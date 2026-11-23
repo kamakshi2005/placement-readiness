@@ -1,0 +1,266 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "Docker container is essentially a lightweight executable package which bundles the application code along with all system dependencies and libraries required for execution."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "Unlike traditional virtual machines which require their own full guest operating system, Docker containers directly share the underlying host operating system kernel."
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Accurately describes container packaging and dependencies.",
+     "Correctly explains kernel sharing compared to virtual machines.",
+     "Very clear and well-structured response."
+    ],
+    "improvements": [
+     "Mention environment consistency across development, testing, and production environments."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:23.388Z"
+  },
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "Docker container is essentially a lightweight executable package which bundles the application code along with all system dependencies and libraries required for execution."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "Unlike traditional virtual machines which require their own full guest operating system, Docker containers directly share the underlying host operating system kernel."
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Accurately describes container packaging and dependencies.",
+     "Correctly contrasts containers with traditional virtual machines regarding OS kernel sharing.",
+     "Very clear and well-structured explanation."
+    ],
+    "improvements": [
+     "Mention how containers ensure environment consistency to address the primary function in development."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:31:14.000Z"
+  },
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "Docker container is essentially a lightweight executable package which bundles the application code along with all system dependencies and libraries required for execution."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "Unlike traditional virtual machines which require their own full guest operating system, Docker containers directly share the underlying host operating system kernel."
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Accurately describes container packaging and dependencies.",
+     "Correctly contrasts containers with traditional virtual machines regarding OS kernel sharing.",
+     "Clear and well-structured explanation."
+    ],
+    "improvements": [
+     "Mention environment consistency across development, testing, and production environments to fully address the primary function."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:31:14.720Z"
+  },
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "Docker container is essentially a lightweight executable package which bundles the application code along with all system dependencies and libraries required for execution."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "Unlike traditional virtual machines which require their own full guest operating system, Docker containers directly share the underlying host operating system kernel."
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Accurately explains the definition and package contents of a container.",
+     "Correctly contrasts containers with traditional virtual machines regarding the OS kernel.",
+     "Clear and well-structured writing style."
+    ],
+    "improvements": [
+     "Mention how containers ensure consistency across different environments to fully answer the primary function."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:31:15.701Z"
+  },
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "Docker container is essentially a lightweight executable package which bundles the application code along with all system dependencies and libraries required for execution."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "Unlike traditional virtual machines which require their own full guest operating system, Docker containers directly share the underlying host operating system kernel."
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Accurately defines the core package structure of a container.",
+     "Correctly explains how containers differ from virtual machines regarding the OS kernel.",
+     "Clear and professional tone with well-structured sentences."
+    ],
+    "improvements": [
+     "Mention environment consistency and how it solves the 'it works on my machine' problem.",
+     "Expand on portability across different stages like development, testing, and production."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:31:16.157Z"
+  },
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "Docker container is essentially a lightweight executable package which bundles the application code along with all system dependencies and libraries required for execution."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "Unlike traditional virtual machines which require their own full guest operating system, Docker containers directly share the underlying host operating system kernel."
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Accurately describes container packaging and dependency inclusion.",
+     "Correctly explains kernel sharing compared to virtual machines.",
+     "Very clear and well-structured writing style."
+    ],
+    "improvements": [
+     "Mention environment consistency across development, testing, and production servers."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:31:16.263Z"
+  }
+ ]
+}

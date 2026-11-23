@@ -1,0 +1,54 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "self-contained digital capsule that wraps up your written logic along with all its personal supporting gear"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "stopping those annoying situations where a program behaves nicely on your personal laptop but completely crashes on someone else's rig, keeping the vibes identical everywhere from testing all the way to final release"
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "piggybacks straight onto the main machine's brain core, making everything super zippy and nimble"
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 2,
+    "strengths": [
+     "Successfully covers all three key technical points.",
+     "Correctly contrasts containers with traditional virtual machines.",
+     "Accurately explains environment consistency and sharing the host kernel."
+    ],
+    "improvements": [
+     "Use more formal and standard technical terminology instead of casual analogies.",
+     "Structure the response to directly and clearly address the core question.",
+     "Avoid overly colloquial phrasing to improve professional clarity."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:24.519Z"
+  }
+ ]
+}

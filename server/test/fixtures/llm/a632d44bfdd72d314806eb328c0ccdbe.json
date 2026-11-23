@@ -1,0 +1,60 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "A Docker container shares the kernel of the host operating system, while a virtual machine has its own full operating system."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "Because of this containers are much lighter and they start in a few seconds."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k4",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "errors": [
+     {
+      "quote": "Containers are also more secure than VMs because they are fully isolated from each other.",
+      "explanation": "Virtual machines generally provide stronger isolation than containers, contrary to the candidate's claim."
+     }
+    ],
+    "correctness": 2,
+    "depth": 2,
+    "clarity": 3,
+    "strengths": [
+     "Correctly identifies that containers share the host kernel while VMs run a full OS.",
+     "Accurately describes containers as lightweight with fast startup times."
+    ],
+    "improvements": [
+     "Mention the role of the hypervisor in virtual machines.",
+     "Correct the misconception regarding security and isolation levels between VMs and containers."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:26:30.238Z"
+  }
+ ]
+}

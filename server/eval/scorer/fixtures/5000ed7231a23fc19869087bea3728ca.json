@@ -1,0 +1,63 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "OAuth 2.0 serves as a delegated authorization framework"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "allows third-party applications to safely access user resources without needing private login passwords."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "user authenticates with an identity provider, which issues an access token to the requesting app."
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "covered",
+      "evidence": [
+       "access levels are carefully restricted using defined permissions called scopes"
+      ]
+     }
+    ],
+    "errors": [
+     {
+      "quote": "OAuth 2.0 operates strictly over the UDP transport protocol to minimize token exchange latency.",
+      "explanation": "OAuth 2.0 is an authorization framework running over HTTP/HTTPS, not UDP."
+     }
+    ],
+    "correctness": 2,
+    "depth": 3,
+    "clarity": 3,
+    "strengths": [
+     "Covers all key points of the OAuth 2.0 framework accurately",
+     "Uses correct terminology such as scopes and access tokens"
+    ],
+    "improvements": [
+     "Remove incorrect technical assertions, such as claiming OAuth operates over UDP"
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:20.848Z"
+  }
+ ]
+}

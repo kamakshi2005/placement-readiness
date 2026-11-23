@@ -1,0 +1,56 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "OAuth 2.0 is primarily implemented as a delegated authorization framework."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "issues access tokens to the requesting application."
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "errors": [],
+    "correctness": 2,
+    "depth": 2,
+    "clarity": 3,
+    "strengths": [
+     "Clearly identifies OAuth 2.0 as a delegated authorization framework.",
+     "Mentions the use of access tokens issued to the requesting application.",
+     "Well-structured and easy to read."
+    ],
+    "improvements": [
+     "Mention that OAuth 2.0 avoids exposing user credentials to third-party applications.",
+     "Explain the concept of scopes for restricting access levels."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:23.256Z"
+  }
+ ]
+}

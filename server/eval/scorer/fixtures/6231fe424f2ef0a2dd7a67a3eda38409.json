@@ -1,0 +1,62 @@
+{
+ "kind": "generate",
+ "task": "score_b",
+ "promptStart": "Act as an independent second examiner. You have not seen any other examiner's marks.\nFirst look for factually incorrect statements in the candidate's answer, then check coverage, then rate it.\n\nerrors: each incorrect statement, quoted from the answer, with a one-line explanation of why it is wrong.\n",
+ "responses": [
+  {
+   "data": {
+    "errors": [],
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "this system acts like giving a temporary VIP wristband to outside apps"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "the main gatekeeper gives it a special pass instead of your secret password"
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "the main gatekeeper gives it a special pass",
+       "expires quickly"
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "covered",
+      "evidence": [
+       "This pass has strict boundaries on what rooms the app is allowed to visit"
+      ]
+     }
+    ],
+    "correctness": 4,
+    "depth": 2,
+    "clarity": 3,
+    "strengths": [
+     "Uses a clear and effective analogy to explain the core concept.",
+     "Correctly identifies all key technical components of the OAuth 2.0 flow.",
+     "Explains the security benefit of avoiding credential sharing."
+    ],
+    "improvements": [
+     "Remove irrelevant personal anecdotes about the uncle's apartment security system.",
+     "Use standard industry terminology such as 'access token' and 'scopes' alongside the analogy.",
+     "Explicitly mention that OAuth 2.0 is an authorization framework."
+    ]
+   },
+   "meta": {
+    "task": "score_b",
+    "model": "gemini-3.1-flash-lite",
+    "modelVersion": "gemini-3.1-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:44.215Z"
+  }
+ ]
+}

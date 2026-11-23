@@ -1,0 +1,57 @@
+{
+ "kind": "generate",
+ "task": "score_b",
+ "promptStart": "Act as an independent second examiner. You have not seen any other examiner's marks.\nFirst look for factually incorrect statements in the candidate's answer, then check coverage, then rate it.\n\nerrors: each incorrect statement, quoted from the answer, with a one-line explanation of why it is wrong.\n",
+ "responses": [
+  {
+   "data": {
+    "errors": [],
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "OAuth 2.0 is primarily implemented as a delegated authorization framework."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "the flow relies on a central identity provider that authenticates the user and subsequently issues access tokens to the requesting application."
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "correctness": 4,
+    "depth": 2,
+    "clarity": 4,
+    "strengths": [
+     "Accurate definition of the framework",
+     "Clear explanation of the token issuance process",
+     "Professional and concise tone"
+    ],
+    "improvements": [
+     "Mention that the primary benefit is avoiding password sharing with third parties",
+     "Explain the concept of scopes as a method to restrict access levels",
+     "Expand on the security benefits of using tokens instead of credentials"
+    ]
+   },
+   "meta": {
+    "task": "score_b",
+    "model": "gemini-3.1-flash-lite",
+    "modelVersion": "gemini-3.1-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:28:38.755Z"
+  }
+ ]
+}

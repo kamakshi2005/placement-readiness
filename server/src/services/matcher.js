@@ -103,7 +103,7 @@ export async function resolveBorderline(results, judge) {
   return results.map((r) => {
     if (r.status !== 'borderline') return r;
     const v = verdicts[i++] || { verdict: 'no', reason: 'No verdict returned' };
-    return { ...r, status: STATUS[v.verdict] || 'missing', method: 'llm', reason: v.reason, judgeModel: v.modelVersion || v.model };
+    return { ...r, status: STATUS[v.verdict] || 'missing', method: 'llm', reason: v.reason, judgeModel: v.modelVersion || v.model || 'unknown (pre-versioning)' };
   });
 }
 

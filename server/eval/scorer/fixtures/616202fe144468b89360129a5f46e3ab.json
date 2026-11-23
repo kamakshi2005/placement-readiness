@@ -1,0 +1,56 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "Standard JavaScript relies on dynamic typing, whereas TypeScript introduces static type checking during development."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "catch type mismatches and missing properties during compilation before deploying to production, preventing unexpected runtime exceptions."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "improves developer tooling with intelligent autocomplete and refactoring assistance in IDEs, which simplifies codebase maintainability over time."
+      ]
+     }
+    ],
+    "errors": [
+     {
+      "quote": "TypeScript emits standalone WebAssembly binaries directly into the browser to speed up execution.",
+      "explanation": "TypeScript compiles to JavaScript, not WebAssembly binaries."
+     }
+    ],
+    "correctness": 2,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Clearly identifies the core difference between static and dynamic typing.",
+     "Well-structured answer with high overall readability and precise terminology."
+    ],
+    "improvements": [
+     "Avoid introducing factual inaccuracies about what TypeScript compiles to."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:19.577Z"
+  }
+ ]
+}

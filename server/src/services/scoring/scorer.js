@@ -6,6 +6,7 @@ import { generateJSON, embed, modelInfo } from '../llm.js';
 import { modelsForTask } from '../../config/models.js';
 import { buildScoringPrompt, scoringSchema } from './rubric.js';
 import { findQuote } from './evidence.js';
+import { findExaminerDirectedText } from './manipulation.js';
 import { aggregateRuns, coverageFromLabels, computeOverall, needThirdRun } from './aggregate.js';
 import { cosine } from '../matcher.js';
 import {
@@ -116,6 +117,13 @@ export async function scoreAnswerText({ question, reference, answer, seedKey }) 
   }
 
   const agg = aggregateRuns(runs, reference.keyPoints, answer);
+
+  // Text addressed to the examiner: the score may have been influenced -> uncertain, with reason
+  const manipulationFlags = findExaminerDirectedText(answer);
+  if (manipulationFlags.length) {
+    agg.uncertain = true;
+    agg.uncertainReasons.push(`The answer contains text addressed to the examiner ("${manipulationFlags[0]}"), which earns no marks; the score should be checked.`);
+  }
   const quoteStats = runs.reduce(
     (t, r) => ({
       returned: t.returned + r.quotes.returned,
@@ -144,6 +152,7 @@ export async function scoreAnswerText({ question, reference, answer, seedKey }) 
       keyPoints: keyPoints.map(({ id, label }) => ({ id, label })),
     })),
     ...agg,
+    manipulationFlags,
     quoteStats,
     refSimilarity,
     config: {

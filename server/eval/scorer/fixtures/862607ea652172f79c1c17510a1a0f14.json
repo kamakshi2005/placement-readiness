@@ -1,0 +1,61 @@
+{
+ "kind": "generate",
+ "task": "score_b",
+ "promptStart": "Act as an independent second examiner. You have not seen any other examiner's marks.\nFirst look for factually incorrect statements in the candidate's answer, then check coverage, then rate it.\n\nerrors: each incorrect statement, quoted from the answer, with a one-line explanation of why it is wrong.\n",
+ "responses": [
+  {
+   "data": {
+    "errors": [],
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "OAuth 2.0 is basically an open standard used for delegated authorization"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "enable third-party applications to access a user's resources from a service without needing the user's actual login passwords"
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "the user authenticates directly with the central identity provider, which then generates and issues an access token to the client app"
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "covered",
+      "evidence": [
+       "restricts what data or actions the application can perform by utilizing specific permissions known as scopes"
+      ]
+     }
+    ],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Covers all key points accurately",
+     "Uses correct technical terminology",
+     "Concise and well-structured explanation"
+    ],
+    "improvements": [
+     "Mention that access tokens are time-limited",
+     "Briefly explain the role of the Authorization Server versus the Resource Server",
+     "Provide a concrete real-world example of its usage"
+    ]
+   },
+   "meta": {
+    "task": "score_b",
+    "model": "gemini-3.1-flash-lite",
+    "modelVersion": "gemini-3.1-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:28:21.950Z"
+  }
+ ]
+}

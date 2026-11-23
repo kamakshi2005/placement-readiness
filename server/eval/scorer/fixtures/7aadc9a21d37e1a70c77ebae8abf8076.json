@@ -1,0 +1,49 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "partial",
+      "evidence": [
+       "makes our applications much more reliable and robust"
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 0,
+    "depth": 0,
+    "clarity": 3,
+    "strengths": [
+     "The response is well-structured and easy to read.",
+     "Shows enthusiasm for TypeScript as a modern tool."
+    ],
+    "improvements": [
+     "Address the technical mechanism of compile-time type checking.",
+     "Explain how TypeScript compares to dynamic typing in JavaScript.",
+     "Discuss how catching bugs early prevents runtime crashes."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:22.131Z"
+  }
+ ]
+}

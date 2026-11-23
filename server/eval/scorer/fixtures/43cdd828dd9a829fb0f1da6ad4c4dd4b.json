@@ -1,0 +1,18 @@
+{
+ "kind": "generate",
+ "task": "eval",
+ "promptStart": "You write an example interview answer, in the voice of an Indian fresher, for testing a scoring system.\nWrite ONE answer (90-140 words) that is genuinely hard to grade:\n- it expresses the ideas of the key points below CORRECTLY but in unusual, non-standard words\n  (analogies, informal names, its own",
+ "responses": [
+  {
+   "data": {
+    "answer": "Basically, this system acts like giving a temporary VIP wristband to outside apps so they can enter the club without needing your actual house keys. When a stranger app wants to check your stuff, the main gatekeeper gives it a special pass instead of your secret password. This pass has strict boundaries on what rooms the app is allowed to visit and expires quickly. By the way, my uncle actually built a very similar security gate for his apartment complex using face scanners and smart locks, which was super high tech because nobody could sneak in without getting scanned first, and it even sent instant WhatsApp alerts to his phone whenever a delivery guy dropped off a package at the front lobby."
+   },
+   "meta": {
+    "task": "eval",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:28:12.134Z"
+  }
+ ]
+}

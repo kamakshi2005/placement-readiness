@@ -1,0 +1,53 @@
+{
+ "kind": "generate",
+ "task": "score_c",
+ "promptStart": "You are reviewing a written interview answer. Work through these questions.\n\n1. For each key point: does the answer express this idea? Answer \"covered\" (yes, clearly and correctly),\n   \"partial\" (only in part, vaguely or imprecisely) or \"missing\" (no). Back up \"covered\"/\"partial\" with quotes.\n2. Is ",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "I never try to swallow the whole ocean at once. Instead, I hunt for the absolute barebone essentials required to make the machine run right now"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "I quickly skim through the official guidebook to whip up a messy first-draft model that just barely functions."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "I immediately knock on the doors of online forums or ask my seniors for a quick rescue."
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 3,
+    "strengths": [
+     "Used a vivid and engaging personal example of building a robotic rover overnight.",
+     "Clearly explained the strategy of prioritizing core fundamentals over learning everything at once.",
+     "Included concrete steps such as consulting seniors and online forums when blocked."
+    ],
+    "improvements": [
+     "Keep personal anecdotes focused on professional or technical problem-solving rather than casual details like food.",
+     "Refine the transition between the core strategy and the personal example for smoother flow."
+    ]
+   },
+   "meta": {
+    "task": "score_c",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:30:19.930Z"
+  }
+ ]
+}

@@ -1,6 +1,8 @@
 // Scoring settings in one place (Phase 1 — confidence-aware, evidence-based scoring).
 
-export const SCORING_PROMPT_VERSION = 's1';
+// s2: the scoring instruction is repeated AFTER the candidate's answer, and answers containing
+// text addressed to the examiner are flagged uncertain (scoring/manipulation.js)
+export const SCORING_PROMPT_VERSION = 's2';
 
 // Rubric weights for the overall 0–100 score. Coverage is computed in code from key-point labels.
 export const WEIGHTS = { coverage: 0.4, correctness: 0.3, depth: 0.2, clarity: 0.1 };

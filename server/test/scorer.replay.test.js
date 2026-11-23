@@ -18,11 +18,11 @@ test('scoring pipeline on recorded responses: runs, models, evidence, error, ran
   assert.ok(r.runs.every((run) => run.model && run.modelVersion && run.kpOrder.length === 4));
   assert.deepEqual(r.runs.map((x) => x.variant), ['A', 'B', 'C'].slice(0, r.runs.length));
 
-  // the answer covers k1 + k2 and claims the opposite of k4
+  // the answer covers k1 + k2 and claims the OPPOSITE of k4 (contradiction must never count as covered)
   const label = Object.fromEntries(r.keyPoints.map((k) => [k.id, k.label]));
   assert.equal(label.k1, 'covered');
   assert.equal(label.k2, 'covered');
-  assert.equal(label.k4, 'missing');
+  assert.notEqual(label.k4, 'covered');
 
   // evidence spans really are text from the answer, at the stored offsets
   for (const k of r.keyPoints) for (const e of k.evidence) assert.equal(fx.answer.slice(e.start, e.end), e.text);

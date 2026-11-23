@@ -1,0 +1,52 @@
+{
+ "kind": "generate",
+ "task": "score_b",
+ "promptStart": "Act as an independent second examiner. You have not seen any other examiner's marks.\nFirst look for factually incorrect statements in the candidate's answer, then check coverage, then rate it.\n\nerrors: each incorrect statement, quoted from the answer, with a one-line explanation of why it is wrong.\n",
+ "responses": [
+  {
+   "data": {
+    "errors": [],
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k4",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "correctness": 1,
+    "depth": 0,
+    "clarity": 3,
+    "strengths": [
+     "Uses professional and clear language",
+     "Correctly identifies OAuth 2.0 as a security protocol"
+    ],
+    "improvements": [
+     "Define the core purpose of OAuth 2.0 as delegated authorization",
+     "Explain the role of access tokens and scopes",
+     "Mention that it allows third-party access without sharing user credentials"
+    ]
+   },
+   "meta": {
+    "task": "score_b",
+    "model": "gemini-3.1-flash-lite",
+    "modelVersion": "gemini-3.1-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:28:24.067Z"
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "kind": "generate",
+ "task": "score_c",
+ "promptStart": "You are reviewing a written interview answer. Work through these questions.\n\n1. For each key point: does the answer express this idea? Answer \"covered\" (yes, clearly and correctly),\n   \"partial\" (only in part, vaguely or imprecisely) or \"missing\" (no). Back up \"covered\"/\"partial\" with quotes.\n2. Is ",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "whereas plain JavaScript just lets every vehicle crash into each other",
+       "stops you from mixing up text with numbers"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "catching those silly shape mismatches early during translation saves you from those embarrassing midnight production panics"
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "you get this super helpful smart-autocomplete buddy"
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 3,
+    "depth": 2,
+    "clarity": 2,
+    "strengths": [
+     "Successfully identifies all three core concepts using creative analogies.",
+     "Correctly explains compile-time detection of type mismatches.",
+     "Recognizes the benefit of IDE autocomplete."
+    ],
+    "improvements": [
+     "Remove irrelevant personal anecdotes and casual tangents like the mention of the uncle's radio collection.",
+     "Adopt a more professional and direct technical tone.",
+     "Provide deeper technical reasoning regarding how static types handle complex object shapes and refactoring."
+    ]
+   },
+   "meta": {
+    "task": "score_c",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:25.208Z"
+  }
+ ]
+}

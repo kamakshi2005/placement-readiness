@@ -1,0 +1,57 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "prioritize learning only the core basics essential for the target feature rather than reading entire books."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "I immediately build a minimal working prototype to validate my practical knowledge."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "If I encounter any bugs, I refer to official guides or ask senior colleagues for advice."
+      ]
+     }
+    ],
+    "errors": [
+     {
+      "quote": "Technically, JavaScript is a statically typed language compiled directly to machine code",
+      "explanation": "JavaScript is dynamically typed and traditionally interpreted or JIT compiled, not statically typed and compiled directly to machine code."
+     }
+    ],
+    "correctness": 2,
+    "depth": 3,
+    "clarity": 3,
+    "strengths": [
+     "Clearly covers all key methodological points for learning under a deadline.",
+     "Provides a logical and structured approach including prototyping and leveraging mentors."
+    ],
+    "improvements": [
+     "Avoid introducing unrelated technical definitions that contain factual errors.",
+     "Include a specific personal example rather than just a general strategy."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:22.397Z"
+  }
+ ]
+}

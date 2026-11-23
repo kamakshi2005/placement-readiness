@@ -1,0 +1,18 @@
+{
+ "kind": "generate",
+ "task": "eval",
+ "promptStart": "You write an example interview answer, in the voice of an Indian fresher, for testing a scoring system.\nWrite ONE answer (90-140 words) that is genuinely hard to grade:\n- it expresses the ideas of the key points below CORRECTLY but in unusual, non-standard words\n  (analogies, informal names, its own",
+ "responses": [
+  {
+   "data": {
+    "answer": "Basically, it acts like a self-contained digital capsule that wraps up your written logic along with all its personal supporting gear so nothing goes missing. The big deal is stopping those annoying situations where a program behaves nicely on your personal laptop but completely crashes on someone else's rig, keeping the vibes identical everywhere from testing all the way to final release. It is sort of like how my mom packs my tiffin box with everything I need so I do not have to rely on local canteen ingredients. Instead of dragging around a heavy heavy-duty computer simulation like old-school heavy virtual machines do, this clever setup just piggybacks straight onto the main machine's brain core, making everything super zippy and nimble."
+   },
+   "meta": {
+    "task": "eval",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:28:10.063Z"
+  }
+ ]
+}

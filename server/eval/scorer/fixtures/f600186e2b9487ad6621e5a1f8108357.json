@@ -1,0 +1,65 @@
+{
+ "kind": "generate",
+ "task": "score_b",
+ "promptStart": "Act as an independent second examiner. You have not seen any other examiner's marks.\nFirst look for factually incorrect statements in the candidate's answer, then check coverage, then rate it.\n\nerrors: each incorrect statement, quoted from the answer, with a one-line explanation of why it is wrong.\n",
+ "responses": [
+  {
+   "data": {
+    "errors": [
+     {
+      "quote": "OAuth 2.0 operates strictly over the UDP transport protocol to minimize token exchange latency.",
+      "explanation": "OAuth 2.0 is an application-layer framework that typically operates over TCP/TLS (HTTPS), not UDP."
+     }
+    ],
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "OAuth 2.0 serves as a delegated authorization framework"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "allows third-party applications to safely access user resources without needing private login passwords."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "the user authenticates with an identity provider, which issues an access token to the requesting app."
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "covered",
+      "evidence": [
+       "access levels are carefully restricted using defined permissions called scopes"
+      ]
+     }
+    ],
+    "correctness": 2,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Accurately identifies the primary purpose of delegated authorization.",
+     "Correctly explains the role of scopes in restricting access.",
+     "Clear and concise writing style."
+    ],
+    "improvements": [
+     "Remove the incorrect claim regarding the use of the UDP transport protocol.",
+     "Clarify that OAuth 2.0 relies on HTTPS (TLS) for secure communication."
+    ]
+   },
+   "meta": {
+    "task": "score_b",
+    "model": "gemini-3.1-flash-lite",
+    "modelVersion": "gemini-3.1-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:34.801Z"
+  }
+ ]
+}

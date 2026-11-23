@@ -1,0 +1,18 @@
+{
+ "kind": "generate",
+ "task": "eval",
+ "promptStart": "You write an example interview answer, in the voice of an Indian fresher, for testing a scoring system.\nWrite ONE answer (90-140 words) that is genuinely hard to grade:\n- it expresses the ideas of the key points below CORRECTLY but in unusual, non-standard words\n  (analogies, informal names, its own",
+ "responses": [
+  {
+   "data": {
+    "answer": "When facing a strict finish line for a project needing fresh tools, I never try to swallow the whole ocean at once. Instead, I hunt for the absolute barebone essentials required to make the machine run right now, ignoring extra fancy features. I quickly skim through the official guidebook to whip up a messy first-draft model that just barely functions. Whenever my code refuses to cooperate, I immediately knock on the doors of online forums or ask my seniors for a quick rescue. Actually, this whole rush reminds me of my final year college fest where we had to build a robotic rover overnight. We had no clue about Arduino wiring, so we just connected random wires until the motor spun, and honestly, the samosas we ate at 3 AM kept us awake more than the coffee did."
+   },
+   "meta": {
+    "task": "eval",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:28:17.462Z"
+  }
+ ]
+}

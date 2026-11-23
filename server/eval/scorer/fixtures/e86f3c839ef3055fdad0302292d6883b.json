@@ -1,0 +1,51 @@
+{
+ "kind": "generate",
+ "task": "score_b",
+ "promptStart": "Act as an independent second examiner. You have not seen any other examiner's marks.\nFirst look for factually incorrect statements in the candidate's answer, then check coverage, then rate it.\n\nerrors: each incorrect statement, quoted from the answer, with a one-line explanation of why it is wrong.\n",
+ "responses": [
+  {
+   "data": {
+    "errors": [],
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "Docker container is essentially a lightweight executable package which bundles the application code along with all system dependencies and libraries required for execution."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "Unlike traditional virtual machines which require their own full guest operating system, Docker containers directly share the underlying host operating system kernel."
+      ]
+     }
+    ],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Accurately defines the technical nature of a container.",
+     "Provides a clear architectural comparison with virtual machines.",
+     "Uses precise terminology."
+    ],
+    "improvements": [
+     "Explicitly mention the primary function of ensuring environment consistency.",
+     "Connect the technical benefits to the 'it works on my machine' problem."
+    ]
+   },
+   "meta": {
+    "task": "score_b",
+    "model": "gemini-3.1-flash-lite",
+    "modelVersion": "gemini-3.1-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:31:15.574Z"
+  }
+ ]
+}

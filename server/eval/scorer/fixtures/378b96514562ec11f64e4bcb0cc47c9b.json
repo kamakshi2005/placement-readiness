@@ -1,0 +1,56 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "A Docker container acts as a lightweight executable package holding the application code and all its necessary dependencies."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "Its key function is providing complete environment consistency across development, testing, and production stages."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "sharing the host OS kernel instead of using full guest operating systems like traditional virtual machines."
+      ]
+     }
+    ],
+    "errors": [
+     {
+      "quote": "Docker containers communicate with each other primarily using the FTP protocol for internal networking.",
+      "explanation": "Docker containers do not use FTP for internal networking; they typically use bridge networks or other Docker networking drivers."
+     }
+    ],
+    "correctness": 3,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Accurately covers all expected key points.",
+     "Very clear and well-structured explanation."
+    ],
+    "improvements": [
+     "Avoid introducing incorrect technical details like FTP for container networking."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:28:19.720Z"
+  }
+ ]
+}

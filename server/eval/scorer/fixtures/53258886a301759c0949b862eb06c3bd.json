@@ -1,0 +1,53 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "TypeScript acts like a strict traffic cop for your data before it even hits the road, whereas plain JavaScript just lets every vehicle crash into each other"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "catching those silly shape mismatches early during translation saves you from those embarrassing midnight production panics."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "you get this super helpful smart-autocomplete buddy that basically reads your mind and stops you from mixing up text with numbers."
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 2,
+    "clarity": 2,
+    "strengths": [
+     "Uses engaging metaphors to describe static versus dynamic typing.",
+     "Correctly identifies the benefit of catching type errors early."
+    ],
+    "improvements": [
+     "Remove irrelevant personal anecdotes about hobbies.",
+     "Use more precise technical terminology instead of informal metaphors.",
+     "Elaborate on maintainability and trade-offs."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:28:22.651Z"
+  }
+ ]
+}

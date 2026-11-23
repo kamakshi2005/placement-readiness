@@ -1,0 +1,54 @@
+{
+ "kind": "generate",
+ "task": "score_b",
+ "promptStart": "Act as an independent second examiner. You have not seen any other examiner's marks.\nFirst look for factually incorrect statements in the candidate's answer, then check coverage, then rate it.\n\nerrors: each incorrect statement, quoted from the answer, with a one-line explanation of why it is wrong.\n",
+ "responses": [
+  {
+   "data": {
+    "errors": [],
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "I first focus strictly on the basic concepts required to complete the immediate task instead of trying to master everything."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "I quickly build a basic proof-of-concept to test my initial understanding and ensure things work."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "If I face any issues or get stuck along the way, I check official documentation, search on Stack Overflow, or reach out to senior engineers"
+      ]
+     }
+    ],
+    "correctness": 4,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Clear and structured approach to time-constrained learning",
+     "Covers all required key points effectively",
+     "Professional and concise communication style"
+    ],
+    "improvements": [
+     "Include a specific example of a technology learned under a deadline to enhance the depth",
+     "Elaborate on how the 'deeper details' are prioritized after the deadline",
+     "Mention how trade-offs are evaluated when choosing which features to prioritize for the prototype"
+    ]
+   },
+   "meta": {
+    "task": "score_b",
+    "model": "gemini-3.1-flash-lite",
+    "modelVersion": "gemini-3.1-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:02.243Z"
+  }
+ ]
+}

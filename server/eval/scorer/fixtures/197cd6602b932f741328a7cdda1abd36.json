@@ -1,0 +1,65 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "partial",
+      "evidence": [
+       "this system acts like giving a temporary VIP wristband to outside apps"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "so they can enter the club without needing your actual house keys",
+       "gives it a special pass instead of your secret password"
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "the main gatekeeper gives it a special pass"
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "covered",
+      "evidence": [
+       "This pass has strict boundaries on what rooms the app is allowed to visit"
+      ]
+     }
+    ],
+    "errors": [
+     {
+      "quote": "my uncle actually built a very similar security gate for his apartment complex",
+      "explanation": "Includes irrelevant personal anecdotes about an apartment complex security gate instead of focusing on OAuth 2.0."
+     }
+    ],
+    "correctness": 3,
+    "depth": 2,
+    "clarity": 2,
+    "strengths": [
+     "Uses a helpful analogy for delegated access and scopes",
+     "Correctly identifies that passwords are not exposed"
+    ],
+    "improvements": [
+     "Avoid sharing irrelevant personal anecdotes",
+     "Use correct technical terminology such as 'access token' and 'delegated authorization'"
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:28:22.374Z"
+  }
+ ]
+}

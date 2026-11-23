@@ -1,0 +1,54 @@
+{
+ "kind": "generate",
+ "task": "score_b",
+ "promptStart": "Act as an independent second examiner. You have not seen any other examiner's marks.\nFirst look for factually incorrect statements in the candidate's answer, then check coverage, then rate it.\n\nerrors: each incorrect statement, quoted from the answer, with a one-line explanation of why it is wrong.\n",
+ "responses": [
+  {
+   "data": {
+    "errors": [],
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "I build a small working prototype right away.",
+       "Testing my code in a minimal setup helps me verify if my approach works"
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "I rely heavily on official documentation and online developer forums like Stack Overflow",
+       "If I hit any roadblocks, I do not hesitate to ask senior teammates for help"
+      ]
+     }
+    ],
+    "correctness": 4,
+    "depth": 2,
+    "clarity": 4,
+    "strengths": [
+     "Clear and concise communication style.",
+     "Correct identification of resources for learning and overcoming blockers.",
+     "Proactive approach to validating knowledge through prototyping."
+    ],
+    "improvements": [
+     "Explicitly state the strategy of prioritizing core fundamentals over learning the entire technology.",
+     "Include a specific, concrete personal example to demonstrate the approach in a real-world scenario.",
+     "Mention the importance of revisiting the technology for long-term mastery after the initial deadline is met."
+    ]
+   },
+   "meta": {
+    "task": "score_b",
+    "model": "gemini-3.1-flash-lite",
+    "modelVersion": "gemini-3.1-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:48.606Z"
+  }
+ ]
+}

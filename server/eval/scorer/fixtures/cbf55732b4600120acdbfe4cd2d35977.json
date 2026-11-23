@@ -1,0 +1,59 @@
+{
+ "kind": "generate",
+ "task": "score_c",
+ "promptStart": "You are reviewing a written interview answer. Work through these questions.\n\n1. For each key point: does the answer express this idea? Answer \"covered\" (yes, clearly and correctly),\n   \"partial\" (only in part, vaguely or imprecisely) or \"missing\" (no). Back up \"covered\"/\"partial\" with quotes.\n2. Is ",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "this system acts like giving a temporary VIP wristband to outside apps so they can enter the club without needing your actual house keys."
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "instead of your secret password."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "the main gatekeeper gives it a special pass"
+      ]
+     },
+     {
+      "id": "k4",
+      "label": "covered",
+      "evidence": [
+       "This pass has strict boundaries on what rooms the app is allowed to visit"
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 2,
+    "clarity": 2,
+    "strengths": [
+     "Used a creative and intuitive analogy to explain the core authorization concept.",
+     "Correctly identified tokens, scopes, and the avoidance of password sharing."
+    ],
+    "improvements": [
+     "Remove irrelevant personal anecdotes and unrelated technical details.",
+     "Use correct terminology such as access tokens, scopes, and resource servers alongside the analogy."
+    ]
+   },
+   "meta": {
+    "task": "score_c",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:30:10.436Z"
+  }
+ ]
+}

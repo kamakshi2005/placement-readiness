@@ -1,0 +1,53 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "covered",
+      "evidence": [
+       "In standard JavaScript, we use dynamic typing, so data types are determined while running the application. But TypeScript gives us static type checking"
+      ]
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "Because of compile-time checking, any type mismatches or syntax issues are caught early during development itself, long before the code reaches production servers."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "Additionally, TypeScript greatly improves developer tooling by offering smart autocompletion and easier refactoring in IDEs like VS Code.",
+       "make large codebases much easier to maintain over time"
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 4,
+    "depth": 4,
+    "clarity": 4,
+    "strengths": [
+     "Accurately explains the distinction between static and dynamic typing",
+     "Clearly details the benefits of catching errors at compile time",
+     "Well-structured and easy to read"
+    ],
+    "improvements": [
+     "Mention potential null reference checks as an additional reliability benefit"
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:29:19.409Z"
+  }
+ ]
+}

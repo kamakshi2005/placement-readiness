@@ -1,0 +1,46 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k2",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k3",
+      "label": "missing",
+      "evidence": []
+     }
+    ],
+    "errors": [],
+    "correctness": 0,
+    "depth": 0,
+    "clarity": 2,
+    "strengths": [
+     "Maintains a confident and positive tone."
+    ],
+    "improvements": [
+     "Provide a concrete personal example with the specific actions taken.",
+     "Explain the strategy used to prioritize learning under tight deadlines.",
+     "Describe how you utilize resources like documentation or mentorship."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:28:23.923Z"
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "kind": "generate",
+ "task": "score_a",
+ "promptStart": "You are an interview examiner. Score the candidate's answer against the reference.\n\nFor EACH key point decide:\n- \"covered\": the answer states it clearly and correctly\n- \"partial\": the answer touches on it, but vaguely, incompletely or with imprecise wording\n- \"missing\": the answer does not address i",
+ "responses": [
+  {
+   "data": {
+    "keyPoints": [
+     {
+      "id": "k1",
+      "label": "missing",
+      "evidence": []
+     },
+     {
+      "id": "k2",
+      "label": "covered",
+      "evidence": [
+       "detect silly mistakes and unexpected bugs early in the build phase before we deploy our application live."
+      ]
+     },
+     {
+      "id": "k3",
+      "label": "covered",
+      "evidence": [
+       "enhances developer tooling significantly with features like smart autocompletion",
+       "improves overall maintainability across large team projects"
+      ]
+     }
+    ],
+    "errors": [],
+    "correctness": 3,
+    "depth": 3,
+    "clarity": 4,
+    "strengths": [
+     "Clearly explains the benefit of catching bugs early during compilation.",
+     "Highlights improvements to developer tooling and maintainability.",
+     "Well-structured and easy to read."
+    ],
+    "improvements": [
+     "Mention static typing versus dynamic typing directly.",
+     "Elaborate on how explicit data types prevent runtime type coercion issues."
+    ]
+   },
+   "meta": {
+    "task": "score_a",
+    "model": "gemini-3.5-flash-lite",
+    "modelVersion": "gemini-3.5-flash-lite"
+   },
+   "recordedAt": "2026-11-23T09:28:21.391Z"
+  }
+ ]
+}

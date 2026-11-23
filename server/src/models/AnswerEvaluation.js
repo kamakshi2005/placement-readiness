@@ -83,6 +83,7 @@ const answerEvaluationSchema = new mongoose.Schema(
     scoreMax: Number,
     uncertain: Boolean,
     uncertainReasons: [String],
+    manipulationFlags: [String], // phrases addressed to the examiner (scoring/manipulation.js)
 
     feedback: {
       strengths: [String],
