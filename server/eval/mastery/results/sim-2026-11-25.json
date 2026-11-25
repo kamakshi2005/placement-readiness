@@ -1,0 +1,1503 @@
+{
+  "settings": {
+    "N": 3000,
+    "SESSIONS": 8,
+    "THRESHOLDS": [
+      0.85,
+      0.9,
+      0.95
+    ],
+    "MODEL_EPS": [
+      0.05,
+      0.15
+    ],
+    "model": {
+      "PARAMS": {
+        "learn": 0.1,
+        "guess": 0.2,
+        "slip": 0.1,
+        "forget": 0
+      },
+      "PRIORS": {
+        "missing": 0.15,
+        "partial": 0.35,
+        "matched": 0.6,
+        "unknown": 0.3
+      },
+      "RANGE": {
+        "draws": 200,
+        "percentiles": [
+          10,
+          90
+        ],
+        "priorFactor": [
+          0.3,
+          2
+        ],
+        "learn": [
+          0.02,
+          0.2
+        ],
+        "guess": [
+          0.1,
+          0.35
+        ],
+        "slip": [
+          0.05,
+          0.2
+        ]
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "A",
+      "name": "model assumptions correct",
+      "oracleBrier": 0.05566417494706154,
+      "threshold": {
+        "brier": 0.07341674805228962,
+        "ece": 0.00972702774266896
+      },
+      "m0.05": {
+        "brier": 0.05566417494706154,
+        "ece": 0.009266017182133436,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 7954,
+            "predicted": 0.02610243811798863,
+            "actual": 0.019487050540608498
+          },
+          {
+            "bin": "10-20%",
+            "n": 1355,
+            "predicted": 0.14488340487613638,
+            "actual": 0.12988929889298892
+          },
+          {
+            "bin": "20-30%",
+            "n": 832,
+            "predicted": 0.24656564167269684,
+            "actual": 0.25961538461538464
+          },
+          {
+            "bin": "30-40%",
+            "n": 611,
+            "predicted": 0.34745164881416174,
+            "actual": 0.3911620294599018
+          },
+          {
+            "bin": "40-50%",
+            "n": 523,
+            "predicted": 0.4516130592239743,
+            "actual": 0.5124282982791587
+          },
+          {
+            "bin": "50-60%",
+            "n": 564,
+            "predicted": 0.5509839105384933,
+            "actual": 0.5638297872340425
+          },
+          {
+            "bin": "60-70%",
+            "n": 551,
+            "predicted": 0.6515351168631665,
+            "actual": 0.6823956442831216
+          },
+          {
+            "bin": "70-80%",
+            "n": 740,
+            "predicted": 0.7515816905996495,
+            "actual": 0.7851351351351351
+          },
+          {
+            "bin": "80-90%",
+            "n": 1006,
+            "predicted": 0.8531705814739344,
+            "actual": 0.8628230616302187
+          },
+          {
+            "bin": "90-100%",
+            "n": 9864,
+            "predicted": 0.9878052880994865,
+            "actual": 0.989963503649635
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.05756495160468671,
+            "declared": 1963,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 3,
+            "reachedWithinSessions": 0.9990557129367328,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.03563941299790356,
+            "declared": 1908,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9990557129367328,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.014762165117550574,
+            "declared": 1829,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9971671388101983,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 1,
+          "meanWidth": 0.1449067795654307
+        }
+      },
+      "m0.15": {
+        "brier": 0.06111663410714838,
+        "ece": 0.0231224362408506,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 8321,
+            "predicted": 0.033892544248252825,
+            "actual": 0.028482153587309218
+          },
+          {
+            "bin": "10-20%",
+            "n": 1506,
+            "predicted": 0.14486998492423572,
+            "actual": 0.17729083665338646
+          },
+          {
+            "bin": "20-30%",
+            "n": 791,
+            "predicted": 0.2458832842676362,
+            "actual": 0.36283185840707965
+          },
+          {
+            "bin": "30-40%",
+            "n": 582,
+            "predicted": 0.3483903922344204,
+            "actual": 0.48109965635738833
+          },
+          {
+            "bin": "40-50%",
+            "n": 523,
+            "predicted": 0.45036782619753973,
+            "actual": 0.5717017208413002
+          },
+          {
+            "bin": "50-60%",
+            "n": 531,
+            "predicted": 0.5512182957722448,
+            "actual": 0.6365348399246704
+          },
+          {
+            "bin": "60-70%",
+            "n": 582,
+            "predicted": 0.6511559486552313,
+            "actual": 0.7371134020618557
+          },
+          {
+            "bin": "70-80%",
+            "n": 783,
+            "predicted": 0.7530342611400955,
+            "actual": 0.8045977011494253
+          },
+          {
+            "bin": "80-90%",
+            "n": 1049,
+            "predicted": 0.8533770113213154,
+            "actual": 0.8970448045757865
+          },
+          {
+            "bin": "90-100%",
+            "n": 9332,
+            "predicted": 0.9866716615789531,
+            "actual": 0.9916416630947278
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.04709576138147567,
+            "declared": 1911,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9971671388101983,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.029016657710908115,
+            "declared": 1861,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9952785646836638,
+            "delayAfterLearningMedian": 3
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.012415349887133182,
+            "declared": 1772,
+            "answersNeededMedian": 3,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9905571293673276,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 0.825,
+          "meanWidth": 0.15522381239346064
+        }
+      }
+    },
+    {
+      "id": "B",
+      "name": "noisier students (guess 0.30, slip 0.15)",
+      "oracleBrier": 0.08904005091682173,
+      "threshold": {
+        "brier": 0.10761364424962448,
+        "ece": 0.02778168415835121
+      },
+      "m0.05": {
+        "brier": 0.09080461691357379,
+        "ece": 0.02680964155130767,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 6134,
+            "predicted": 0.03034430389743747,
+            "actual": 0.043690903162699704
+          },
+          {
+            "bin": "10-20%",
+            "n": 1482,
+            "predicted": 0.1451473514881299,
+            "actual": 0.16936572199730093
+          },
+          {
+            "bin": "20-30%",
+            "n": 996,
+            "predicted": 0.2483544758746215,
+            "actual": 0.2580321285140562
+          },
+          {
+            "bin": "30-40%",
+            "n": 839,
+            "predicted": 0.3475505139713384,
+            "actual": 0.33253873659118
+          },
+          {
+            "bin": "40-50%",
+            "n": 785,
+            "predicted": 0.45022067106412494,
+            "actual": 0.4063694267515924
+          },
+          {
+            "bin": "50-60%",
+            "n": 737,
+            "predicted": 0.5506398496874478,
+            "actual": 0.5047489823609227
+          },
+          {
+            "bin": "60-70%",
+            "n": 740,
+            "predicted": 0.650667881557224,
+            "actual": 0.6067567567567568
+          },
+          {
+            "bin": "70-80%",
+            "n": 970,
+            "predicted": 0.75357773649829,
+            "actual": 0.6484536082474227
+          },
+          {
+            "bin": "80-90%",
+            "n": 1316,
+            "predicted": 0.852905362238247,
+            "actual": 0.7735562310030395
+          },
+          {
+            "bin": "90-100%",
+            "n": 10001,
+            "predicted": 0.985431958756788,
+            "actual": 0.9658034196580342
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.13027001421127427,
+            "declared": 2111,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9965034965034965,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.09419930589985126,
+            "declared": 2017,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9938811188811189,
+            "delayAfterLearningMedian": 3
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.06033578174186779,
+            "declared": 1906,
+            "answersNeededMedian": 3,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9877622377622378,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 0.9991666666666666,
+          "meanWidth": 0.223132742025873
+        }
+      },
+      "m0.15": {
+        "brier": 0.09615787302930623,
+        "ece": 0.027917635122580477,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 6574,
+            "predicted": 0.03818048952009252,
+            "actual": 0.05902038332826286
+          },
+          {
+            "bin": "10-20%",
+            "n": 1729,
+            "predicted": 0.14493780671903342,
+            "actual": 0.20474262579525737
+          },
+          {
+            "bin": "20-30%",
+            "n": 1037,
+            "predicted": 0.24759015736736034,
+            "actual": 0.3317261330761813
+          },
+          {
+            "bin": "30-40%",
+            "n": 811,
+            "predicted": 0.3474870216958228,
+            "actual": 0.4352651048088779
+          },
+          {
+            "bin": "40-50%",
+            "n": 782,
+            "predicted": 0.44873527201474106,
+            "actual": 0.4820971867007673
+          },
+          {
+            "bin": "50-60%",
+            "n": 737,
+            "predicted": 0.5501761180273619,
+            "actual": 0.5997286295793759
+          },
+          {
+            "bin": "60-70%",
+            "n": 834,
+            "predicted": 0.6494817517630371,
+            "actual": 0.6354916067146283
+          },
+          {
+            "bin": "70-80%",
+            "n": 976,
+            "predicted": 0.7538156110046377,
+            "actual": 0.7325819672131147
+          },
+          {
+            "bin": "80-90%",
+            "n": 1334,
+            "predicted": 0.8529582208351921,
+            "actual": 0.8193403298350824
+          },
+          {
+            "bin": "90-100%",
+            "n": 9186,
+            "predicted": 0.9837072626220489,
+            "actual": 0.9694099716960592
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.11204343534057255,
+            "declared": 2026,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9903846153846154,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.07848232848232849,
+            "declared": 1924,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9798951048951049,
+            "delayAfterLearningMedian": 3
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.05190502484815019,
+            "declared": 1811,
+            "answersNeededMedian": 3,
+            "answersNeededP90": 6,
+            "reachedWithinSessions": 0.9659090909090909,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 0.8966666666666666,
+          "meanWidth": 0.22843813668909826
+        }
+      }
+    },
+    {
+      "id": "C1",
+      "name": "faster learners (learn 0.25)",
+      "oracleBrier": 0.05281773487945652,
+      "threshold": {
+        "brier": 0.0786048672433889,
+        "ece": 0.06034303561146474
+      },
+      "m0.05": {
+        "brier": 0.06287632645034469,
+        "ece": 0.049840762629010396,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 5013,
+            "predicted": 0.027746340046971286,
+            "actual": 0.052663076002393776
+          },
+          {
+            "bin": "10-20%",
+            "n": 1016,
+            "predicted": 0.1469947647030263,
+            "actual": 0.2824803149606299
+          },
+          {
+            "bin": "20-30%",
+            "n": 690,
+            "predicted": 0.24878194689482128,
+            "actual": 0.4405797101449275
+          },
+          {
+            "bin": "30-40%",
+            "n": 569,
+            "predicted": 0.35038595176704485,
+            "actual": 0.5975395430579965
+          },
+          {
+            "bin": "40-50%",
+            "n": 594,
+            "predicted": 0.4501474417690417,
+            "actual": 0.6885521885521886
+          },
+          {
+            "bin": "50-60%",
+            "n": 601,
+            "predicted": 0.5516580419811254,
+            "actual": 0.7487520798668885
+          },
+          {
+            "bin": "60-70%",
+            "n": 646,
+            "predicted": 0.6505667296140893,
+            "actual": 0.8142414860681114
+          },
+          {
+            "bin": "70-80%",
+            "n": 870,
+            "predicted": 0.7511521982812094,
+            "actual": 0.871264367816092
+          },
+          {
+            "bin": "80-90%",
+            "n": 1297,
+            "predicted": 0.8549710879762022,
+            "actual": 0.9275250578257518
+          },
+          {
+            "bin": "90-100%",
+            "n": 12704,
+            "predicted": 0.9876222747807918,
+            "actual": 0.9951983627204031
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.0290519877675841,
+            "declared": 2616,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 3,
+            "reachedWithinSessions": 1,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.01794071762870515,
+            "declared": 2564,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 1,
+            "delayAfterLearningMedian": 3
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.00684931506849315,
+            "declared": 2482,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9971883786316776,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 0.845,
+          "meanWidth": 0.18080874643488112
+        }
+      },
+      "m0.15": {
+        "brier": 0.07223172824675198,
+        "ece": 0.0688847030138059,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 5292,
+            "predicted": 0.0368472224914271,
+            "actual": 0.07482993197278912
+          },
+          {
+            "bin": "10-20%",
+            "n": 1193,
+            "predicted": 0.14465086552271025,
+            "actual": 0.3336127409891031
+          },
+          {
+            "bin": "20-30%",
+            "n": 723,
+            "predicted": 0.24660976719861666,
+            "actual": 0.5228215767634855
+          },
+          {
+            "bin": "30-40%",
+            "n": 573,
+            "predicted": 0.3484194921303798,
+            "actual": 0.6649214659685864
+          },
+          {
+            "bin": "40-50%",
+            "n": 582,
+            "predicted": 0.4497964138204878,
+            "actual": 0.7439862542955327
+          },
+          {
+            "bin": "50-60%",
+            "n": 615,
+            "predicted": 0.5493584348387678,
+            "actual": 0.7983739837398374
+          },
+          {
+            "bin": "60-70%",
+            "n": 671,
+            "predicted": 0.6519745308523184,
+            "actual": 0.8464977645305514
+          },
+          {
+            "bin": "70-80%",
+            "n": 968,
+            "predicted": 0.7544918876505802,
+            "actual": 0.9028925619834711
+          },
+          {
+            "bin": "80-90%",
+            "n": 1335,
+            "predicted": 0.852205829146536,
+            "actual": 0.9430711610486892
+          },
+          {
+            "bin": "90-100%",
+            "n": 12048,
+            "predicted": 0.9860645022719511,
+            "actual": 0.9965139442231076
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.02464788732394366,
+            "declared": 2556,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9953139643861293,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.012805122048819529,
+            "declared": 2499,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9925023430178069,
+            "delayAfterLearningMedian": 3
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.0054416073670992045,
+            "declared": 2389,
+            "answersNeededMedian": 3,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9878163074039362,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 0.7483333333333333,
+          "meanWidth": 0.1854799411021514
+        }
+      }
+    },
+    {
+      "id": "C2",
+      "name": "slower learners (learn 0.03)",
+      "oracleBrier": 0.04640637418570535,
+      "threshold": {
+        "brier": 0.06997499118145029,
+        "ece": 0.043114829252902616
+      },
+      "m0.05": {
+        "brier": 0.051045103514700256,
+        "ece": 0.030661456817113145,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 9865,
+            "predicted": 0.025416025964434825,
+            "actual": 0.011556006082108465
+          },
+          {
+            "bin": "10-20%",
+            "n": 1478,
+            "predicted": 0.14436587402223267,
+            "actual": 0.07307171853856563
+          },
+          {
+            "bin": "20-30%",
+            "n": 813,
+            "predicted": 0.24531818914482756,
+            "actual": 0.13530135301353013
+          },
+          {
+            "bin": "30-40%",
+            "n": 660,
+            "predicted": 0.3473200220671419,
+            "actual": 0.21515151515151515
+          },
+          {
+            "bin": "40-50%",
+            "n": 555,
+            "predicted": 0.449116267406916,
+            "actual": 0.33153153153153153
+          },
+          {
+            "bin": "50-60%",
+            "n": 483,
+            "predicted": 0.550178989067571,
+            "actual": 0.4472049689440994
+          },
+          {
+            "bin": "60-70%",
+            "n": 472,
+            "predicted": 0.6488920292839366,
+            "actual": 0.5338983050847458
+          },
+          {
+            "bin": "70-80%",
+            "n": 629,
+            "predicted": 0.7531509426600946,
+            "actual": 0.643879173290938
+          },
+          {
+            "bin": "80-90%",
+            "n": 820,
+            "predicted": 0.8534250068081173,
+            "actual": 0.7829268292682927
+          },
+          {
+            "bin": "90-100%",
+            "n": 8225,
+            "predicted": 0.9888492081287901,
+            "actual": 0.9862613981762918
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.08316566063044936,
+            "declared": 1491,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.99909338168631,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.05211952744961779,
+            "declared": 1439,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9981867633726201,
+            "delayAfterLearningMedian": 3
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.021849963583394028,
+            "declared": 1373,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9981867633726201,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 0.5633333333333334,
+          "meanWidth": 0.17192446480306828
+        }
+      },
+      "m0.15": {
+        "brier": 0.051985009722654164,
+        "ece": 0.016458277503094997,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 10320,
+            "predicted": 0.03305187298198308,
+            "actual": 0.015019379844961241
+          },
+          {
+            "bin": "10-20%",
+            "n": 1559,
+            "predicted": 0.14466730090389637,
+            "actual": 0.11161000641436819
+          },
+          {
+            "bin": "20-30%",
+            "n": 812,
+            "predicted": 0.246128096976332,
+            "actual": 0.22167487684729065
+          },
+          {
+            "bin": "30-40%",
+            "n": 605,
+            "predicted": 0.3471122597130899,
+            "actual": 0.2909090909090909
+          },
+          {
+            "bin": "40-50%",
+            "n": 480,
+            "predicted": 0.44818337636660316,
+            "actual": 0.41875
+          },
+          {
+            "bin": "50-60%",
+            "n": 480,
+            "predicted": 0.549705645611405,
+            "actual": 0.48333333333333334
+          },
+          {
+            "bin": "60-70%",
+            "n": 504,
+            "predicted": 0.6532793103313189,
+            "actual": 0.6408730158730159
+          },
+          {
+            "bin": "70-80%",
+            "n": 598,
+            "predicted": 0.7514775729604473,
+            "actual": 0.717391304347826
+          },
+          {
+            "bin": "80-90%",
+            "n": 796,
+            "predicted": 0.8524909265320879,
+            "actual": 0.8253768844221105
+          },
+          {
+            "bin": "90-100%",
+            "n": 7846,
+            "predicted": 0.9875984950530817,
+            "actual": 0.9887840938057609
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.06744666207845836,
+            "declared": 1453,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9972801450589301,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.042765502494654314,
+            "declared": 1403,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9936536718041704,
+            "delayAfterLearningMedian": 3
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.017870439314966492,
+            "declared": 1343,
+            "answersNeededMedian": 3,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9900271985494107,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 0.48083333333333333,
+          "meanWidth": 0.1865592295056673
+        }
+      }
+    },
+    {
+      "id": "D",
+      "name": "resumes over-claim (true prior matched 0.35, partial 0.20)",
+      "oracleBrier": 0.063845839879634,
+      "threshold": {
+        "brier": 0.08435308245216024,
+        "ece": 0.017129502164322054
+      },
+      "m0.05": {
+        "brier": 0.06536369156511006,
+        "ece": 0.009558496899441602,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 9665,
+            "predicted": 0.026572709298802084,
+            "actual": 0.022452146921883083
+          },
+          {
+            "bin": "10-20%",
+            "n": 1637,
+            "predicted": 0.14513454383176147,
+            "actual": 0.13500305436774587
+          },
+          {
+            "bin": "20-30%",
+            "n": 937,
+            "predicted": 0.24717463137699658,
+            "actual": 0.23799359658484526
+          },
+          {
+            "bin": "30-40%",
+            "n": 681,
+            "predicted": 0.34772847458589196,
+            "actual": 0.35389133627019087
+          },
+          {
+            "bin": "40-50%",
+            "n": 646,
+            "predicted": 0.44907986763409613,
+            "actual": 0.4086687306501548
+          },
+          {
+            "bin": "50-60%",
+            "n": 596,
+            "predicted": 0.5506590818427775,
+            "actual": 0.5083892617449665
+          },
+          {
+            "bin": "60-70%",
+            "n": 587,
+            "predicted": 0.6499345897343202,
+            "actual": 0.5826235093696763
+          },
+          {
+            "bin": "70-80%",
+            "n": 709,
+            "predicted": 0.7524687786380673,
+            "actual": 0.7320169252468265
+          },
+          {
+            "bin": "80-90%",
+            "n": 939,
+            "predicted": 0.8531265646209092,
+            "actual": 0.8242811501597445
+          },
+          {
+            "bin": "90-100%",
+            "n": 7603,
+            "predicted": 0.9868206870809468,
+            "actual": 0.9831645403130344
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.08372365339578454,
+            "declared": 1708,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9985119047619048,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.052307692307692305,
+            "declared": 1625,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9985119047619048,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.028086218158066622,
+            "declared": 1531,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9970238095238095,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 0.955,
+          "meanWidth": 0.2002083123270891
+        }
+      },
+      "m0.15": {
+        "brier": 0.06813943497858561,
+        "ece": 0.00856496767247089,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 10065,
+            "predicted": 0.034482815729624514,
+            "actual": 0.03278688524590164
+          },
+          {
+            "bin": "10-20%",
+            "n": 1812,
+            "predicted": 0.14520381138294686,
+            "actual": 0.15011037527593818
+          },
+          {
+            "bin": "20-30%",
+            "n": 894,
+            "predicted": 0.24744641543965432,
+            "actual": 0.2930648769574944
+          },
+          {
+            "bin": "30-40%",
+            "n": 672,
+            "predicted": 0.3502458211160886,
+            "actual": 0.4181547619047619
+          },
+          {
+            "bin": "40-50%",
+            "n": 581,
+            "predicted": 0.4500310349267545,
+            "actual": 0.47160068846815834
+          },
+          {
+            "bin": "50-60%",
+            "n": 561,
+            "predicted": 0.5500085824181642,
+            "actual": 0.5686274509803921
+          },
+          {
+            "bin": "60-70%",
+            "n": 543,
+            "predicted": 0.6502042708957324,
+            "actual": 0.6961325966850829
+          },
+          {
+            "bin": "70-80%",
+            "n": 764,
+            "predicted": 0.7528034702399277,
+            "actual": 0.7761780104712042
+          },
+          {
+            "bin": "80-90%",
+            "n": 942,
+            "predicted": 0.8522142365734139,
+            "actual": 0.8397027600849257
+          },
+          {
+            "bin": "90-100%",
+            "n": 7166,
+            "predicted": 0.9856794470030479,
+            "actual": 0.987859335752163
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.06581352833638025,
+            "declared": 1641,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9970238095238095,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.03826530612244898,
+            "declared": 1568,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9955357142857143,
+            "delayAfterLearningMedian": 3
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.01970108695652174,
+            "declared": 1472,
+            "answersNeededMedian": 3,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9940476190476191,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 0.7458333333333333,
+          "meanWidth": 0.21632849199521365
+        }
+      }
+    },
+    {
+      "id": "E",
+      "name": "noisier scoring (2× scorer noise)",
+      "oracleBrier": 0.06272828527881046,
+      "threshold": {
+        "brier": 0.0796924635284115,
+        "ece": 0.010324680804391665
+      },
+      "m0.05": {
+        "brier": 0.06272828527881046,
+        "ece": 0.00840452164981874,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 7622,
+            "predicted": 0.026742944477557245,
+            "actual": 0.030963001836788243
+          },
+          {
+            "bin": "10-20%",
+            "n": 1406,
+            "predicted": 0.14426266993180623,
+            "actual": 0.16216216216216217
+          },
+          {
+            "bin": "20-30%",
+            "n": 799,
+            "predicted": 0.2465513130588459,
+            "actual": 0.295369211514393
+          },
+          {
+            "bin": "30-40%",
+            "n": 671,
+            "predicted": 0.34651611564717666,
+            "actual": 0.35469448584202684
+          },
+          {
+            "bin": "40-50%",
+            "n": 552,
+            "predicted": 0.4483715060094081,
+            "actual": 0.463768115942029
+          },
+          {
+            "bin": "50-60%",
+            "n": 556,
+            "predicted": 0.5508412507873811,
+            "actual": 0.6097122302158273
+          },
+          {
+            "bin": "60-70%",
+            "n": 607,
+            "predicted": 0.6517183742732615,
+            "actual": 0.7034596375617792
+          },
+          {
+            "bin": "70-80%",
+            "n": 751,
+            "predicted": 0.7538387507174001,
+            "actual": 0.7470039946737683
+          },
+          {
+            "bin": "80-90%",
+            "n": 997,
+            "predicted": 0.8522949534299834,
+            "actual": 0.8736208625877633
+          },
+          {
+            "bin": "90-100%",
+            "n": 10039,
+            "predicted": 0.9871352122502995,
+            "actual": 0.9870505030381512
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.05673408978786384,
+            "declared": 2027,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9990636704119851,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.04187689202825429,
+            "declared": 1982,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9971910112359551,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.019241047568145375,
+            "declared": 1871,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9915730337078652,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 1,
+          "meanWidth": 0.18676288566918317
+        }
+      },
+      "m0.15": {
+        "brier": 0.06863459021262035,
+        "ece": 0.026187392403227268,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 8050,
+            "predicted": 0.03460423884095167,
+            "actual": 0.04248447204968944
+          },
+          {
+            "bin": "10-20%",
+            "n": 1493,
+            "predicted": 0.14406988254037095,
+            "actual": 0.21299397186872068
+          },
+          {
+            "bin": "20-30%",
+            "n": 851,
+            "predicted": 0.2470113222851868,
+            "actual": 0.3407755581668625
+          },
+          {
+            "bin": "30-40%",
+            "n": 603,
+            "predicted": 0.3466857566020065,
+            "actual": 0.44776119402985076
+          },
+          {
+            "bin": "40-50%",
+            "n": 531,
+            "predicted": 0.44942933449981426,
+            "actual": 0.5932203389830508
+          },
+          {
+            "bin": "50-60%",
+            "n": 554,
+            "predicted": 0.5481247937700735,
+            "actual": 0.6877256317689531
+          },
+          {
+            "bin": "60-70%",
+            "n": 581,
+            "predicted": 0.6500530290141843,
+            "actual": 0.7504302925989673
+          },
+          {
+            "bin": "70-80%",
+            "n": 828,
+            "predicted": 0.7529240312397374,
+            "actual": 0.782608695652174
+          },
+          {
+            "bin": "80-90%",
+            "n": 1121,
+            "predicted": 0.8528174666319485,
+            "actual": 0.9090098126672613
+          },
+          {
+            "bin": "90-100%",
+            "n": 9388,
+            "predicted": 0.9863832103044553,
+            "actual": 0.9887089902002556
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.04829689883070666,
+            "declared": 1967,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9925093632958801,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.03664921465968586,
+            "declared": 1910,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9906367041198502,
+            "delayAfterLearningMedian": 3
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.017174515235457065,
+            "declared": 1805,
+            "answersNeededMedian": 3,
+            "answersNeededP90": 5,
+            "reachedWithinSessions": 0.9812734082397003,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 0.845,
+          "meanWidth": 0.1932119216493065
+        }
+      }
+    },
+    {
+      "id": "F",
+      "name": "messier real scores (15 % random outcomes)",
+      "oracleBrier": 0.05253795353006548,
+      "threshold": {
+        "brier": 0.0733452232494082,
+        "ece": 0.008755862561772628
+      },
+      "m0.05": {
+        "brier": 0.054838148555607376,
+        "ece": 0.007763911996036219,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 8034,
+            "predicted": 0.026208864931513604,
+            "actual": 0.027134677620114515
+          },
+          {
+            "bin": "10-20%",
+            "n": 1326,
+            "predicted": 0.1434617911496406,
+            "actual": 0.11463046757164404
+          },
+          {
+            "bin": "20-30%",
+            "n": 733,
+            "predicted": 0.24871411923802014,
+            "actual": 0.1855388813096862
+          },
+          {
+            "bin": "30-40%",
+            "n": 562,
+            "predicted": 0.34889750414078186,
+            "actual": 0.29537366548042704
+          },
+          {
+            "bin": "40-50%",
+            "n": 519,
+            "predicted": 0.4497087551359347,
+            "actual": 0.4007707129094412
+          },
+          {
+            "bin": "50-60%",
+            "n": 511,
+            "predicted": 0.5500871588456462,
+            "actual": 0.5420743639921722
+          },
+          {
+            "bin": "60-70%",
+            "n": 550,
+            "predicted": 0.6503551561900743,
+            "actual": 0.6127272727272727
+          },
+          {
+            "bin": "70-80%",
+            "n": 684,
+            "predicted": 0.7531152275191676,
+            "actual": 0.7558479532163743
+          },
+          {
+            "bin": "80-90%",
+            "n": 891,
+            "predicted": 0.8509454532806584,
+            "actual": 0.8395061728395061
+          },
+          {
+            "bin": "90-100%",
+            "n": 10190,
+            "predicted": 0.9890115236242851,
+            "actual": 0.9888125613346418
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.059679037111334,
+            "declared": 1994,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 3,
+            "reachedWithinSessions": 1,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.03960905349794239,
+            "declared": 1944,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 3,
+            "reachedWithinSessions": 1,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.018776824034334765,
+            "declared": 1864,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9981203007518797,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 0.9258333333333333,
+          "meanWidth": 0.1855026338570904
+        }
+      },
+      "m0.15": {
+        "brier": 0.05253795353006548,
+        "ece": 0.008519191266385137,
+        "calibrationBins": [
+          {
+            "bin": "0-10%",
+            "n": 8348,
+            "predicted": 0.03389902072162989,
+            "actual": 0.025874460948730235
+          },
+          {
+            "bin": "10-20%",
+            "n": 1359,
+            "predicted": 0.1453365446584875,
+            "actual": 0.13833701250919794
+          },
+          {
+            "bin": "20-30%",
+            "n": 742,
+            "predicted": 0.24681237357485558,
+            "actual": 0.2371967654986523
+          },
+          {
+            "bin": "30-40%",
+            "n": 481,
+            "predicted": 0.3492183745746336,
+            "actual": 0.3284823284823285
+          },
+          {
+            "bin": "40-50%",
+            "n": 460,
+            "predicted": 0.4488062977573672,
+            "actual": 0.4782608695652174
+          },
+          {
+            "bin": "50-60%",
+            "n": 470,
+            "predicted": 0.5499860565335156,
+            "actual": 0.5723404255319149
+          },
+          {
+            "bin": "60-70%",
+            "n": 579,
+            "predicted": 0.6501982340235909,
+            "actual": 0.690846286701209
+          },
+          {
+            "bin": "70-80%",
+            "n": 680,
+            "predicted": 0.7532329339502317,
+            "actual": 0.7764705882352941
+          },
+          {
+            "bin": "80-90%",
+            "n": 904,
+            "predicted": 0.8507250004460375,
+            "actual": 0.8672566371681416
+          },
+          {
+            "bin": "90-100%",
+            "n": 9977,
+            "predicted": 0.9886225019160643,
+            "actual": 0.9918813270522201
+          }
+        ],
+        "decisions": [
+          {
+            "threshold": 0.85,
+            "falseMasteryRate": 0.04805725971370143,
+            "declared": 1956,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 3,
+            "reachedWithinSessions": 1,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.9,
+            "falseMasteryRate": 0.03129890453834116,
+            "declared": 1917,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9981203007518797,
+            "delayAfterLearningMedian": 2
+          },
+          {
+            "threshold": 0.95,
+            "falseMasteryRate": 0.014138118542686243,
+            "declared": 1839,
+            "answersNeededMedian": 2,
+            "answersNeededP90": 4,
+            "reachedWithinSessions": 0.9981203007518797,
+            "delayAfterLearningMedian": 3
+          }
+        ],
+        "range": {
+          "coverage": 0.9591666666666666,
+          "meanWidth": 0.1949613520527011
+        }
+      }
+    }
+  ]
+}

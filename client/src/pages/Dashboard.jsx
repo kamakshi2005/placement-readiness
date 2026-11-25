@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 import { api } from '../lib/api.js';
+import SkillMasteryPanel from '../components/SkillMasteryPanel.jsx';
 
 // Placeholder home — the real progress dashboard is Module 7
 export default function Dashboard() {
@@ -36,6 +37,8 @@ export default function Dashboard() {
           New resume–JD analysis
         </Link>
       </div>
+
+      <SkillMasteryPanel />
 
       {interviews?.length > 0 && (
         <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">

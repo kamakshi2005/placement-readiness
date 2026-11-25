@@ -1,0 +1,2301 @@
+{
+  "stats": {
+    "same": {
+      "n": 22,
+      "min": 0.8952525359670038,
+      "median": 0.953250873378901,
+      "max": 0.9922474300169063
+    },
+    "sameSkill": {
+      "n": 29,
+      "min": 0.7338957360271915,
+      "median": 0.8197101159736487,
+      "max": 0.8731555500237466
+    },
+    "otherSkill": {
+      "n": 327,
+      "min": 0.6543963110975952,
+      "median": 0.7233854005009653,
+      "max": 0.8876796922000841
+    }
+  },
+  "best": {
+    "cut": 0.895,
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "tp": 22,
+    "fp": 0,
+    "fn": 0
+  },
+  "pairs": [
+    {
+      "kind": "same",
+      "cos": 0.9410894568665369,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9480688229370118,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9719171709733834,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8316630478978447,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.7979072085468162,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7482723053498171,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7288962400174723,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "How does a Docker container differ from a traditional virtual machine?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7415987164828027,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7473050825107085,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7359172044966881,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "What is the primary function of a Docker container in software development?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6969037456348403,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "What is the main purpose of OAuth in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7165569239527997,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "What primary problem does the OAuth protocol solve in modern web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.695091626157484,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7057056422886482,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6882185837509589,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7501358989975967,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7162963979259539,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7091760793633695,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7481926118379859,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.733197667498288,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7233004935484876,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7303016735572537,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7367031829966505,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7311991342960448,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7543289370264232,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7321442591550174,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7629023690911354,
+      "a": "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.8952525359670038,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.937979624710769,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8313584958971777,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.7831208026974327,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7303431959336663,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7086470076411178,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "How does a Docker container differ from a traditional virtual machine?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7195647488235213,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7328240014479724,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7197067141432901,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "What is the primary function of a Docker container in software development?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.682274241568329,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "What is the main purpose of OAuth in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7047959079682903,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "What primary problem does the OAuth protocol solve in modern web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6860090096435435,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6948570606241602,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6800286470008565,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7543771447573503,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7131988565611999,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7025133280118973,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7488258194418743,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7150565804174052,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7257830534672763,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7233854005009653,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7329660030259457,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7233495853252424,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7512442086798438,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7318133425315648,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7539393331784445,
+      "a": "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9431408021541033,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8093135489172695,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.7967201508092021,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7332044655926893,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7203461782083782,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "How does a Docker container differ from a traditional virtual machine?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7222743783205816,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7340030094821643,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7325601315269106,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "What is the primary function of a Docker container in software development?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7119688038707218,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "What is the main purpose of OAuth in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7282428126848886,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "What primary problem does the OAuth protocol solve in modern web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7118459094266898,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7240814380130371,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6962237896366793,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7706407232742186,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7416989342973984,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7233496859890994,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7621337618041675,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7374904949258809,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7227857101828578,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.726119039604995,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7257776928043987,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7122112065362864,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7357482409309746,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7343479698370002,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.757669497682947,
+      "a": "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8197101159736487,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.7818659370649769,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7383099444996909,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.725260048790241,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "How does a Docker container differ from a traditional virtual machine?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7304743075490114,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7352008525889855,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7214932538902533,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "What is the primary function of a Docker container in software development?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6889712393764472,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "What is the main purpose of OAuth in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7107384878414622,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "What primary problem does the OAuth protocol solve in modern web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.689392767785689,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6993026536565479,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6856015046932966,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7447310789278794,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7127880092186188,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7039354906424211,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7493761439148691,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7307074672802597,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7073867809495499,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7202610723873891,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7217110159504463,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7127362574335596,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7410984683326817,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7243712627690326,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7636202615749919,
+      "a": "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.7693896419296764,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7498747836026858,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7300141498990327,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "How does a Docker container differ from a traditional virtual machine?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7232484449470734,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7491826764477367,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.741643881174362,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "What is the primary function of a Docker container in software development?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.710118426950005,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "What is the main purpose of OAuth in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7273446855709124,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "What primary problem does the OAuth protocol solve in modern web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7112229543919475,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7169166367929399,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6974552597384973,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7343481123082582,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7324094126230266,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7258512873680794,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7504493356882999,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7001629643027776,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7376875625452319,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.742385352970019,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7657798296733636,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7180313993997409,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7434298606767951,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7168667709578684,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7832931456746115,
+      "a": "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7109095138757738,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6893759372442739,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "How does a Docker container differ from a traditional virtual machine?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7046494699310426,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7195047336715807,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.727211813680732,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "What is the primary function of a Docker container in software development?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7401753678929514,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "What is the main purpose of OAuth in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7475237411203713,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "What primary problem does the OAuth protocol solve in modern web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7355477982088243,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7485296416927506,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7202309131736213,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7943357870961341,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7597002853422772,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7654425867422076,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.8166570876902203,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.8876796922000841,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7520940547637645,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7726602809439351,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7640273040803114,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.795724595480795,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7496150139765981,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7583942716425908,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7613666390903706,
+      "a": "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9708237443401856,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "How does a Docker container differ from a traditional virtual machine?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9633903468267553,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9922474300169063,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8417848209395474,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "What is the primary function of a Docker container in software development?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6822202137010086,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "What is the main purpose of OAuth in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6860662951957535,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "What primary problem does the OAuth protocol solve in modern web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6852539445376596,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6899559887103435,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7473712643883687,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7321981179668371,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6896482060882695,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6852233096420531,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7289677989512404,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.698547560885952,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7078410445949658,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6896431331136625,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6997614262882639,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6915890800821628,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.8008607372844102,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6837017671323882,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7278532124669603,
+      "a": "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9516883188044238,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.958999316451118,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8539337087920982,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "What is the primary function of a Docker container in software development?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6737610054668315,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "What is the main purpose of OAuth in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6792769351299749,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "What primary problem does the OAuth protocol solve in modern web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6724753770221767,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6788011342289136,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7522029367922464,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.705851294770831,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.671215555133769,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.667004178178247,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7073819427088979,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6818238880498938,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6909852054979791,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6780229016935088,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6825903236544705,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6700547212666779,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.799788766658809,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6791839980230227,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7138847127207703,
+      "a": "How does a Docker container differ from a traditional virtual machine?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9596072835591357,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8307997165448437,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "What is the primary function of a Docker container in software development?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6803020773503601,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "What is the main purpose of OAuth in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6818390696442443,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "What primary problem does the OAuth protocol solve in modern web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6805013074599031,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6847320568445959,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7502329010345978,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7104031656876241,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6660048417609649,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6601653044946784,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7209683148614581,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6995013338666345,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6894951608295073,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6742007597216182,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6784031516348127,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.682763440359596,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7881469662015576,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6780009489739851,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7159323148713341,
+      "a": "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8403214215535086,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "What is the primary function of a Docker container in software development?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.684359552709708,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "What is the main purpose of OAuth in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6894488534599844,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "What primary problem does the OAuth protocol solve in modern web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6889122871720418,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6939918240078726,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7489286335102718,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7369665514824415,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.691044419307675,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6856497048788139,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7349134208596866,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7045994535277366,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7095099717335879,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.691245780026003,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6989570476839,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6969869183825452,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.8063607219434716,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6842502723467268,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7301600205960026,
+      "a": "How does Docker containerization differ from traditional virtual machines regarding resource utilization?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7431874787057464,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "What is the main purpose of OAuth in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7357971870416824,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "What primary problem does the OAuth protocol solve in modern web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7401302140151164,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7533714481628386,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6702395997689153,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7205927516623005,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.722628871211268,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7204696977954206,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7099259446314862,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7024688291832131,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7187971549054141,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7196717822904115,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.733918439327342,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7022989377676037,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7987113080296259,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6933893646634489,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7457919094612239,
+      "a": "What is the primary function of a Docker container in software development?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.953250873378901,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "What primary problem does the OAuth protocol solve in modern web applications?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9726988208347093,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9659754541603804,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8444770137731197,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7475829030988657,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7644919021987195,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7556600204458336,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7453235189045845,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7842352815447468,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.711389996712651,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7076097807945437,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.729848643913964,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6752494486524148,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7266649613019903,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.8031558783121099,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7378435765293623,
+      "a": "What is the main purpose of OAuth in web applications?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9343366033588287,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "What is the primary purpose of OAuth 2.0 in web applications?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.931871327040649,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8463706246690067,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7430217691484747,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7637002812469831,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7551985370431972,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.740544941344065,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7787778399893038,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7206088173947321,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7229258809662952,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7352535039430191,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.678082320087331,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7584293757411539,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7928966204206637,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7339684079660074,
+      "a": "What primary problem does the OAuth protocol solve in modern web applications?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.983424490394043,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8675265375340325,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7470186428681697,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7575012281762128,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7494969419315398,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.743711363326014,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7734171409882565,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7020845411212078,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6992921920940847,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.725349169446609,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6784175086880688,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7250510749330954,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7967624720457522,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.737117388033274,
+      "a": "What is the primary purpose of OAuth 2.0 in web applications?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.858955650658293,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7515492489137984,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7620584813510572,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.755276208773247,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7599790405556992,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7790821141312032,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7097451596083082,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7079759266482657,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7351663885647828,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6897166423648776,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7355306506637334,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.8102037233344234,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7420692587465785,
+      "a": "What is the core purpose of the OAuth 2.0 framework in web applications?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7361655095543959,
+      "a": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?",
+      "b": "How does idempotency influence the choice of HTTP methods in RESTful API design?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7120217915888553,
+      "a": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6923150226782792,
+      "a": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7508368420900823,
+      "a": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7648419713042719,
+      "a": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6956206317169074,
+      "a": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6781899122752675,
+      "a": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6826455486010253,
+      "a": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6663599214854569,
+      "a": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7178856337957028,
+      "a": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7684928664906927,
+      "a": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7008036495628758,
+      "a": "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9388383286815595,
+      "a": "How does idempotency influence the choice of HTTP methods in RESTful API design?",
+      "b": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9190407358326479,
+      "a": "How does idempotency influence the choice of HTTP methods in RESTful API design?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8691510570685641,
+      "a": "How does idempotency influence the choice of HTTP methods in RESTful API design?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.7788695573900642,
+      "a": "How does idempotency influence the choice of HTTP methods in RESTful API design?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7231944341642782,
+      "a": "How does idempotency influence the choice of HTTP methods in RESTful API design?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7041860783905698,
+      "a": "How does idempotency influence the choice of HTTP methods in RESTful API design?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7328773788146316,
+      "a": "How does idempotency influence the choice of HTTP methods in RESTful API design?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7211766979145225,
+      "a": "How does idempotency influence the choice of HTTP methods in RESTful API design?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7173290291245379,
+      "a": "How does idempotency influence the choice of HTTP methods in RESTful API design?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7508580246519881,
+      "a": "How does idempotency influence the choice of HTTP methods in RESTful API design?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7681179934842638,
+      "a": "How does idempotency influence the choice of HTTP methods in RESTful API design?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9763376659897147,
+      "a": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?",
+      "b": "Why is idempotency an important concept when designing RESTful APIs?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8147796362982415,
+      "a": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.7338957360271915,
+      "a": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7264061433413066,
+      "a": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7161325329611785,
+      "a": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.750040265269505,
+      "a": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.664220206441403,
+      "a": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6944167611761828,
+      "a": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7149044357982755,
+      "a": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7413838826319458,
+      "a": "Why is idempotent behavior important when designing HTTP methods in a RESTful API?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8164493064424038,
+      "a": "Why is idempotency an important concept when designing RESTful APIs?",
+      "b": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.7348450175170148,
+      "a": "Why is idempotency an important concept when designing RESTful APIs?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7239600771365428,
+      "a": "Why is idempotency an important concept when designing RESTful APIs?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7184647508230654,
+      "a": "Why is idempotency an important concept when designing RESTful APIs?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7505419191397824,
+      "a": "Why is idempotency an important concept when designing RESTful APIs?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6543963110975952,
+      "a": "Why is idempotency an important concept when designing RESTful APIs?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6859491622076173,
+      "a": "Why is idempotency an important concept when designing RESTful APIs?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7124325607285443,
+      "a": "Why is idempotency an important concept when designing RESTful APIs?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.746897114674283,
+      "a": "Why is idempotency an important concept when designing RESTful APIs?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8288838968463139,
+      "a": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?",
+      "b": "In your Placement Portal project, how did you secure private REST API routes?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.71641903294689,
+      "a": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7043611412386619,
+      "a": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7300275551128508,
+      "a": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.724891788330532,
+      "a": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7665041754726251,
+      "a": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7933098016779389,
+      "a": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.792368988954455,
+      "a": "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7118395306854545,
+      "a": "In your Placement Portal project, how did you secure private REST API routes?",
+      "b": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7153359384312825,
+      "a": "In your Placement Portal project, how did you secure private REST API routes?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7203186564673737,
+      "a": "In your Placement Portal project, how did you secure private REST API routes?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7732106057586629,
+      "a": "In your Placement Portal project, how did you secure private REST API routes?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7331347871187262,
+      "a": "In your Placement Portal project, how did you secure private REST API routes?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.785446059610137,
+      "a": "In your Placement Portal project, how did you secure private REST API routes?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7603780294097229,
+      "a": "In your Placement Portal project, how did you secure private REST API routes?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "same",
+      "cos": 0.9422239980219561,
+      "a": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?",
+      "b": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8731555500237466,
+      "a": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.7671119190617348,
+      "a": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7129325128387431,
+      "a": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7279592805378448,
+      "a": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7220753036321904,
+      "a": "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.8649238086090452,
+      "a": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?",
+      "b": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.7701884678492043,
+      "a": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7180163850597232,
+      "a": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7121270532221109,
+      "a": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7173496896107291,
+      "a": "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "sameSkill",
+      "cos": 0.793682499517625,
+      "a": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?",
+      "b": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7312502241785456,
+      "a": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7127075333635353,
+      "a": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7356497454784687,
+      "a": "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7256247214952805,
+      "a": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?",
+      "b": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6924132553532895,
+      "a": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.6987822089571719,
+      "a": "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7214367930757615,
+      "a": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?",
+      "b": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.7751271027507924,
+      "a": "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    },
+    {
+      "kind": "otherSkill",
+      "cos": 0.745411199462732,
+      "a": "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?",
+      "b": "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    }
+  ]
+}

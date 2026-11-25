@@ -11,6 +11,7 @@ import { SCORING_PROMPT_VERSION } from '../../config/scoring.js';
 import { modelsForTask, DAILY_RESERVE } from '../../config/models.js';
 import { remainingToday, resetInWords } from '../aiQuota.js';
 import { llmMode } from '../llmRecorder.js';
+import { recomputeMastery } from '../mastery/masteryService.js';
 
 // Expected AI requests per AI-scored answer: run A + run B always, run C for about half
 const THIRD_RUN_SHARE = 0.5;
@@ -154,6 +155,8 @@ export async function scoreSession(sessionId, { rescore = false } = {}) {
       }
     );
     if (failures.length) console.warn(`[scoring] session ${id}: ${failures.length} answer(s) failed`);
+    // Phase 2: update the student's skill mastery with the new scores (no AI generation calls)
+    await recomputeMastery(session.user).catch((e) => console.error('[mastery] recompute failed:', e.message));
   } finally {
     running.delete(id);
   }

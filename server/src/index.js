@@ -7,6 +7,7 @@ import authRoutes from './routes/authRoutes.js';
 import analysisRoutes from './routes/analysisRoutes.js';
 import interviewRoutes from './routes/interviewRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
+import masteryRoutes from './routes/masteryRoutes.js';
 import { resumePendingScoring } from './services/scoring/evaluateSession.js';
 
 // Tokens can't be signed or checked without a secret, so refuse to start
@@ -33,6 +34,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/analysis', analysisRoutes);
 app.use('/api/interviews', interviewRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/mastery', masteryRoutes);
 
 // 404 for unknown API routes
 app.use('/api', (req, res) => res.status(404).json({ message: 'Route not found' }));

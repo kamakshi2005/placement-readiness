@@ -1,0 +1,65 @@
+{
+  "about": "Questions actually written by the question generator during development (Nov 2026). Each group = the SAME question reworded (would be answered with the same key points). Groups with the same skill are DIFFERENT questions on that skill (the hard negatives). Labels by Claude; review and edit freely.",
+  "groups": [
+    { "skill": "node.js", "id": "node-event-loop", "texts": [
+      "How does Node.js handle heavy concurrent I/O operations despite running on a single main thread?",
+      "How does the Node.js event loop handle non-blocking asynchronous operations under heavy I/O loads?",
+      "How does Node.js handle concurrent incoming HTTP requests despite executing code on a single thread?",
+      "Node.js runs on a single thread. How does it handle heavy I/O operations without blocking incoming requests?"
+    ] },
+    { "skill": "node.js", "id": "node-streams", "texts": [
+      "In Node.js applications, what are Streams, and why are they preferable over reading entire files into memory when handling large amounts of data?"
+    ] },
+    { "skill": "node.js", "id": "node-error-handling", "texts": [
+      "In your Placement Portal project, how did you structure centralized error handling across your Node.js REST API endpoints?"
+    ] },
+    { "skill": "docker", "id": "docker-vs-vm", "texts": [
+      "How does a Docker container differ from a traditional virtual machine in terms of resource utilization?",
+      "How does a Docker container differ from a traditional virtual machine?",
+      "How does a Docker container differ from a traditional virtual machine regarding OS resource sharing?",
+      "How does Docker containerization differ from traditional virtual machines regarding resource utilization?"
+    ] },
+    { "skill": "docker", "id": "docker-function", "texts": [
+      "What is the primary function of a Docker container in software development?"
+    ] },
+    { "skill": "oauth", "id": "oauth-purpose", "texts": [
+      "What is the main purpose of OAuth in web applications?",
+      "What primary problem does the OAuth protocol solve in modern web applications?",
+      "What is the primary purpose of OAuth 2.0 in web applications?",
+      "What is the core purpose of the OAuth 2.0 framework in web applications?"
+    ] },
+    { "skill": "oauth", "id": "oauth-vs-basic", "texts": [
+      "How does OAuth 2.0 differ from traditional credential-based authentication methods like HTTP Basic?"
+    ] },
+    { "skill": "rest api", "id": "rest-idempotency", "texts": [
+      "How does idempotency influence the choice of HTTP methods in RESTful API design?",
+      "Why is idempotent behavior important when designing HTTP methods in a RESTful API?",
+      "Why is idempotency an important concept when designing RESTful APIs?"
+    ] },
+    { "skill": "rest api", "id": "rest-principles", "texts": [
+      "What core principles make an API RESTful, and how do you decide whether to use query parameters or path parameters?"
+    ] },
+    { "skill": "rest api", "id": "rest-secure-routes", "texts": [
+      "In your Placement Portal project, how did you secure private REST API routes?"
+    ] },
+    { "skill": "typescript", "id": "ts-static-typing", "texts": [
+      "How do TypeScript compile-time type checks improve code reliability compared to standard JavaScript dynamic typing?",
+      "How does static typing in TypeScript help prevent common runtime errors that occur in plain JavaScript?"
+    ] },
+    { "skill": "typescript", "id": "ts-large-scale", "texts": [
+      "Why would a team choose TypeScript over standard JavaScript for building a large-scale backend application?"
+    ] },
+    { "skill": "typescript", "id": "ts-migration", "texts": [
+      "If you were to migrate your Placement Portal project to TypeScript, how would you manage your branch strategy in Git?"
+    ] },
+    { "skill": "kubernetes", "id": "k8s-purpose", "texts": [
+      "What is Kubernetes, and what fundamental problems does it solve in modern application deployment compared to managing containers manually?"
+    ] },
+    { "skill": "jwt", "id": "jwt-components", "texts": [
+      "What are the main components of a JSON Web Token (JWT), and how does the server verify its authenticity?"
+    ] },
+    { "skill": "redis", "id": "redis-caching", "texts": [
+      "What is Redis, and how can it be used as an in-memory caching layer to improve backend API performance?"
+    ] }
+  ]
+}

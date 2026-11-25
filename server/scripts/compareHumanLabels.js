@@ -87,6 +87,25 @@ const inRange = usable.filter((a, i) => {
 }).length;
 console.log(`\nOverall score: mean |model - you| ${mean(ms.map((x, i) => Math.abs(x - hs[i]))).toFixed(1)} points · Spearman ${spearman(ms, hs).toFixed(2)}`);
 console.log(`Your score fell inside the model's range: ${inRange}/${usable.length}`);
+// ---- Phase 2 checks: the score -> mastery evidence mapping and the confidence weighting ----
+// BKT assumes P(score < 60 | competent) ≈ slip (0.10) and P(score ≥ 60 | not competent) ≈ guess (0.20).
+const judged = usable.filter((a) => /^(y(es)?|no?)$/i.test(a.human_competent || ''));
+if (judged.length) {
+  const comp = judged.filter((a) => yes(a.human_competent));
+  const notComp = judged.filter((a) => !yes(a.human_competent));
+  const slip = comp.length ? comp.filter((a) => Number(a.model_score) < 60).length / comp.length : null;
+  const guess = notComp.length ? notComp.filter((a) => Number(a.model_score) >= 60).length / notComp.length : null;
+  console.log(`\nScore -> mastery evidence (${judged.length} answers you judged competent / not):`);
+  console.log(`  competent but scored < 60 ("slip"):     ${slip == null ? '–' : slip.toFixed(2)} on ${comp.length}  (model assumes 0.10)`);
+  console.log(`  not competent but scored ≥ 60 ("guess"): ${guess == null ? '–' : guess.toFixed(2)} on ${notComp.length}  (model assumes 0.20)`);
+}
+const withConf = usable.filter((a) => a.model_confidence !== '' && a.model_confidence != null);
+if (withConf.length >= 3) {
+  const conf = withConf.map((a) => Number(a.model_confidence));
+  const err = withConf.map((a) => Math.abs(Number(a.model_score) - humanScore(a)));
+  console.log(`Confidence weighting: Spearman(confidence, |model − you|) = ${spearman(conf, err).toFixed(2)}  (negative = low confidence goes with bigger disagreement, as the weighting assumes)`);
+}
+
 const flagged = usable.filter((a) => a.model_uncertain === 'yes');
 if (flagged.length) {
   const err = (list) => mean(list.map((a) => Math.abs(Number(a.model_score) - humanScore(a))));

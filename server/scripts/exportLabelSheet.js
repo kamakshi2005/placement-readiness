@@ -57,6 +57,7 @@ for (const e of chosen) {
     model_score: e.score,
     model_range: `${e.scoreMin}-${e.scoreMax}`,
     model_uncertain: e.uncertain ? 'yes' : 'no',
+    model_confidence: e.confidence?.value ?? '',
     model_correctness: e.dimensions?.correctness?.value,
     model_depth: e.dimensions?.depth?.value,
     model_clarity: e.dimensions?.clarity?.value,
@@ -64,6 +65,7 @@ for (const e of chosen) {
     human_correctness: '',
     human_depth: '',
     human_clarity: '',
+    human_competent: '',
     human_reference_correct: '',
     notes: '',
   });
@@ -93,6 +95,7 @@ console.log(`Wrote ${answerRows.length} answers and ${kpRows.length} key points:
 
 Fill in:
   answers sheet:   human_correctness, human_depth, human_clarity  (0-4, same rubric as the app)
+                   human_competent  (yes / no — would you call this a competent answer for the skill?)
                    human_reference_correct  (yes / partly / no — is the MODEL answer itself right?)
   keypoints sheet: human_label       (covered / partial / missing)
                    human_kp_correct  (yes / no — is this key point itself correct and relevant?)

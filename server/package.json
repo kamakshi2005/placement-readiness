@@ -14,7 +14,9 @@
     "eval:scorer": "node scripts/evalScorer.js",
     "eval:label-sheet": "node scripts/exportLabelSheet.js",
     "eval:human": "node scripts/compareHumanLabels.js",
-    "rescore": "node scripts/rescore.js"
+    "rescore": "node scripts/rescore.js",
+    "calibrate:repeats": "node scripts/calibrateRepeats.js",
+    "sim:mastery": "node scripts/simulateMastery.js"
   },
   "dependencies": {
     "@google/genai": "^2.32.0",
