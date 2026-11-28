@@ -14,7 +14,18 @@ scoring → Bayesian per-skill mastery → adaptive item selection, with a simul
 the adaptive approach beats fixed interviews.
 
 ## How to work with me
-- Go **step by step** and **confirm with me before each new phase or module**; show a plan first for anything non-trivial.
+**Phase workflow (from 2026-11-28):**
+1. For each phase, write the plan (in `docs/plans/`) and **STOP for approval**. Kamakshi reviews plans with another assistant.
+2. Once a plan is approved, **build, test, fix and commit the whole phase without asking** about routine decisions. When a design choice comes up, pick the recommended option and record it in the **Decision log** at the end of this file (date, decision, options, why).
+3. **Only stop and ask** if something:
+   - costs money (billing, paid APIs),
+   - deletes or overwrites real data,
+   - changes the approved scope or roadmap,
+   - would use more than ~50 % of any model's daily quota in one go,
+   - makes the repo public or shares data outside the project.
+4. At the end of each phase, give **one report**: what was built, test/validation numbers, decisions made (from the log), weak spots, and anything for Kamakshi to decide.
+
+**Always:**
 - Explain what you're doing briefly, in plain words. I want to understand every part of the code.
 - Give honest feedback: flag drawbacks, risks and mistakes, not just positives.
 - Prefer complete, working files over partial snippets.
@@ -92,7 +103,7 @@ code stay (`User.studyGroup`, `InterviewSession.phase`/`studyGroup`, `/api/admin
     - First run (`sim-2026-11-24.json`, 5 %, narrow ranges): continuous beats threshold everywhere (Brier 0.056 vs 0.073 when assumptions hold); 85/90/95 % all reached after a median of 2 answers; false mastery at 95 % 1–6 % (at 85 % 3–13 %) → **keep 95 %**. Range coverage only 49–55 % when guess/slip or learn fell outside the sampled ranges → ranges widened.
     - Second run (`sim-2026-11-25.json`, widened ranges, 5 % vs 15 %): 15 % costs Brier +0.005–0.009 in scenarios A–E (≈ 8–14 %) and is slightly better when real scores are messier (F: 0.053 vs 0.055); it is under-confident in the middle range when scores are clean (ECE 0.023 vs 0.009: predicted 35 % → 48 % actually mastered); answers to 95 % median 2 → 3 (90th pct 4 → 5); false mastery at 95 % same or lower (1–5 %). Range coverage at 5 %: A 100 %, B 100 % (was 55 %), D 96 %, but C2 (learn 0.03, at the edge of the sampled range) still 56 %; at 15 % 48–96 % (lower in A–E because its curve deliberately differs from the simulated truth; 96 % in F).
   - Labelling sheet has `human_competent` + `model_confidence`; `eval:human` estimates slip/guess and checks whether low confidence goes with bigger disagreement.
-- ⏭️ Next: Phase 3 (adaptive engine) plan. Pending for Kamakshi: ~20 hand-labelled real answers (now also: competent yes/no).
+- ⏭️ Next: Phase 3 (adaptive engine): plan in `docs/plans/phase-3-adaptive-engine.md`, **awaiting approval**. Pending for Kamakshi: ~20 hand-labelled real answers (now also: competent yes/no).
 
 ## Known limitations (be honest about these)
 - Years of experience and seniority are not considered; soft skills are excluded from matching.
@@ -117,3 +128,25 @@ code stay (`User.studyGroup`, `InterviewSession.phase`/`studyGroup`, `/api/admin
 cd server; npm install; copy .env.example .env; npm run dev   # http://localhost:5000
 cd client; npm install; npm run dev                          # http://localhost:5173
 ```
+
+## Decision log
+Design decisions with their reasons. **K** = decided by Kamakshi, **C** = chosen by Claude under the phase workflow (recommended option). Newest at the bottom.
+
+| Date | Decision | Options considered | Why | By |
+|---|---|---|---|---|
+| 2026-10-31 | Hybrid skill matcher: exact/alias → embeddings with two thresholds → LLM judge for the borderline band | embeddings only; exact only | Embeddings measure relatedness, not "satisfies the requirement" (Java~JavaScript 0.898) | K |
+| 2026-11-23 | Drop the classmate A/B study and proctoring; new Phase 0–6 roadmap | keep the study | Standalone project, measurement layer is the contribution | K |
+| 2026-11-23 | Scoring: 2 independent runs, 3rd only on disagreement; range (not ±) shown | fixed 3 or 5 runs | Saves free-tier calls; 2–3 runs can't support a ± statistic | K |
+| 2026-11-23 | Runs on DIFFERENT lite models (A 3.5-flash-lite, B 3.1-flash-lite) with different rubric wordings; flash only for extraction + questions | all on flash; billing | Flash is 20 requests/day; different models make disagreement a stronger signal | K |
+| 2026-11-23 | Record/replay for AI calls; scripts and tests replay by default | live calls in tests | Tests must not burn the daily quota | K |
+| 2026-11-23 | Prompt s2: instruction repeated after the answer + code check for examiner-directed text | prompt-only fix | s1 let a manipulation attempt gain +21 points once | K |
+| 2026-11-23 | Contradicted key point = missing + error (in s2) | allow "partial" | Models gave partial credit for a point the answer contradicted | C |
+| 2026-11-24 | Continuous scoring confidence stored per answer; boolean flag unchanged | flag only | Flag fired on 1/4 ambiguous answers; continuous value separates them (0.79 vs ≥ 0.88) | K |
+| 2026-11-24 | BKT with continuous evidence; threshold BKT as baseline | threshold only | Uses the full score; simulation: Brier 0.056 vs 0.073 | K |
+| 2026-11-24 | One-sided Beta curves: mastered Beta(a,1), not mastered Beta(1,b) | hump-shaped Beta (means 0.8 / 0.3); normal curves | Hump shape made a 100 weaker evidence than a 90 (failed unit test); one-sided shapes guarantee higher score ⇒ never weaker evidence | C |
+| 2026-11-24 | Near-duplicate cut-off 0.885 (midpoint) and only between questions sharing a skill | 0.895 (best F1 on the sample); compare all questions | 0.895 sat exactly on the lowest repeat (overfit); different-skill pairs reached 0.888 | C |
+| 2026-11-24 | Skill display name taken from the JD (analysis) wording | first name seen in a question | Consistent, recognisable names | C |
+| 2026-11-25 | Uniform part 15 % (cautious) | 5 % | Brier only +0.005–0.009 when scores are clean, better when messy; Kamakshi prefers caution until real data | K |
+| 2026-11-25 | Wider parameter ranges for the mastery range | original ranges | Coverage was 49–55 % when reality fell outside them; B improved to 100 % | K |
+| 2026-11-25 | Mastery threshold 95 % | 85 %, 90 % | Same median answers (2–3), false mastery 1–5 % vs 3–13 % at 85 % | K |
+| 2026-11-28 | Phase workflow: plan → approval → autonomous build with this log | ask at every step | Saves time; stop only for money, real-data loss, scope, >50 % quota, sharing | K |
